@@ -32,15 +32,15 @@ cd ~/ex3_files #or ~/your_files
 
 * First screenshot
 
-![image-20210203103246755](C:\Users\zhiyiwang\AppData\Roaming\Typora\typora-user-images\image-20210203103246755.png)
+![image-20210203103246755](images/image-20210203103246755.png)
 
 * Second screenshot
 
-![image-20210203103328730](C:\Users\zhiyiwang\AppData\Roaming\Typora\typora-user-images\image-20210203103328730.png)
+![image-20210203103328730](images/image-20210203103328730.png)
 
 * Third screenshot
 
-<img src="C:\Users\zhiyiwang\AppData\Roaming\Typora\typora-user-images\image-20210203103448361.png" alt="image-20210203103448361" style="zoom:67%;" />
+<img src="images/image-20210203103448361.png" alt="image-20210203103448361" style="zoom:67%;" />
 
 ### Task 2.1 Solutions
 
@@ -66,15 +66,15 @@ hdfs dfs -tail /assignment_1/nfl_sum_output_1/part-r-00003
 
 * First screenshot
 
-![image-20210203104525748](C:\Users\zhiyiwang\AppData\Roaming\Typora\typora-user-images\image-20210203104525748.png)
+![image-20210203104525748](images/image-20210203104525748.png)
 
 * Second screenshot option 1
 
-![image-20210203104620127](C:\Users\zhiyiwang\AppData\Roaming\Typora\typora-user-images\image-20210203104620127.png)
+![image-20210203104620127](images/image-20210203104620127.png)
 
 * Second screenshot option 2
 
-![image-20210203104651834](C:\Users\zhiyiwang\AppData\Roaming\Typora\typora-user-images\image-20210203104651834.png)
+![image-20210203104651834](images/image-20210203104651834.png)
 
 ### Task 2.2 Solutions
 
@@ -128,15 +128,15 @@ hdfs dfs -tail /assignment_1/nfl_avg_output_1/part-r-00003
 
 * First screenshot
 
-  ![image-20210203105110258](C:\Users\zhiyiwang\AppData\Roaming\Typora\typora-user-images\image-20210203105110258.png)
+  ![image-20210203105110258](images/image-20210203105110258.png)
 
 * Second screenshot option 1
 
-  ![image-20210203105239112](C:\Users\zhiyiwang\AppData\Roaming\Typora\typora-user-images\image-20210203105239112.png)
+  ![image-20210203105239112](images/image-20210203105239112.png)
 
 * Screen screenshot option 2
 
-  ![image-20210203105321555](C:\Users\zhiyiwang\AppData\Roaming\Typora\typora-user-images\image-20210203105321555.png)
+  ![image-20210203105321555](images/image-20210203105321555.png)
 
 ### Task 3 Solutions
 
@@ -155,9 +155,9 @@ hdfs dfs -ls /nfl_data/
 
 * Screenshot one on hadoop-slave1
 
-![image-20210203105838774](C:\Users\zhiyiwang\AppData\Roaming\Typora\typora-user-images\image-20210203105838774.png)
+![image-20210203105838774](images/image-20210203105838774.png)
 
 * Screenshot two on hadoop-slave2
 
-![image-20210203105958414](C:\Users\zhiyiwang\AppData\Roaming\Typora\typora-user-images\image-20210203105958414.png)
+![image-20210203105958414](images/image-20210203105958414.png)
 
