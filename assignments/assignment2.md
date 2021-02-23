@@ -1,6 +1,6 @@
 # MSBX 5420 Assignment 2
 
-In this assignment, you are required to work on two tasks - (1) a warm-up task that lets you re-work on the two MapReduce calculations in assignment 1, but with spark RDD, dataframe and SQL; (2) solve data analytics problems with spark dataframe or spark SQL. All the existing code and your code will be in the assignment_2.ipynb jupyter notebook. Below are the descriptions of each task and hints for solving the problems.
+In this assignment, you are required to work on two tasks - (1) a warm-up task that lets you re-work on the two MapReduce calculations in assignment 1, but with spark RDD, dataframe and SQL; (2) solve data analytics problems with spark dataframe or spark SQL. All the existing code and your code will be in the assignment2.ipynb jupyter notebook. Below are the descriptions of each task and hints for solving the problems.
 
 ## Task 1 - Warm Up with Spark
 
@@ -8,7 +8,7 @@ Let's first do a warm-up with spark to review the ways of using spark RDD, spark
 
 First, let's prepare the data. Different from assignment 1, this time with more data ingestion features in spark, we just use the raw data from Kaggle. You can either download the data from Kaggle ([https://www.kaggle.com/maxhorowitz/nflplaybyplay2009to2016](https://www.kaggle.com/maxhorowitz/nflplaybyplay2009to2016)), unzip the file, and simply rename *NFL Play by Play 2009-2018 (v5).csv* to *NFL_Play_by_Play_2009-2018.csv* (no need for more data cleaning), or download from the Dropbox link here ([https://www.dropbox.com/s/781yawitsul5bfs/NFL_Play_by_Play_2009-2018.csv?dl=0](https://www.dropbox.com/s/781yawitsul5bfs/NFL_Play_by_Play_2009-2018.csv?dl=0)).
 
-Second, get your environment ready. You are suggested to use docker with `jupyter/pyspark-notebook`, and mount the jupyter notebook and dataset into the container. If you cannot use docker, you can use MyBinder ([mybinder.org](https://mybinder.org)) with your GitHub repo (see week 2 lecture if you need, or use this pre-built one *[here](https://mybinder.org/v2/gh/msbx5420-class/msbx5420-class.github.io/HEAD)*, or let me know and I will help you build one), or use the AWS EMR cluster to run spark (see week 6 and week 7 lectures if you need). Note that if you have to use MyBinder, try to focus on the notebook as it sometimes may be timeout if you don't do anything on it (and make sure to download and save your notebook afterwards - File - Download as - Notebook) After you can visit the files in your jupyter notebook or jupyter lab inside the container, open assignment_2.ipynb to start the first task.
+Second, get your environment ready. You are suggested to use docker with `jupyter/pyspark-notebook`, and mount the jupyter notebook and dataset into the container. If you cannot use docker, you can use MyBinder ([mybinder.org](https://mybinder.org)) with your GitHub repo (see week 2 lecture if you need, or use this pre-built one *[here](https://mybinder.org/v2/gh/msbx5420-class/msbx5420-class.github.io/HEAD)*, or let me know and I will help you build one), or use the AWS EMR cluster to run spark (see week 6 and week 7 lectures if you need). Note that if you have to use MyBinder, try to focus on the notebook as it sometimes may be timeout if you don't do anything on it (and make sure to download and save your notebook afterwards - File - Download as - Notebook) After you can visit the files in your jupyter notebook or jupyter lab inside the container, open assignment2.ipynb to start the first task.
 
 Now follow the steps in the notebook to complete task 1. In the notebook, we load the data with spark session as a dataframe. Note that here we infer the schema of data with null values as "NA" (recall in the first assignment's python code. we tried to filter "NA"), so `yards_gained` column is integer now (also other columns are in their correct types) so you don't need to transfer the type in calculation. We then drop duplicate rows in the data to make sure our calculation results are correct. Then we convert the `df_nfl` dataframe into an RDD for spark RDD operations, and use the `df_nfl` dataframe for dataframe operations and sql queries. Write your code for the two calculations with spark RDD, spark dataframe, and spark SQL, respectively, and output your results in the notebook by using `take()` or `show()`.
 
@@ -60,7 +60,7 @@ One week after the announcement - Mar 2 (Section 003) / Mar 4 (Section 002/003B)
 
 You will submit one jupyter notebook file in Canvas.
 
-You will need to submit the *jupyter notebook assignment_2.ipynb with your completed code and output*. Your code should include:
+You will need to submit the *jupyter notebook assignment2.ipynb with your completed code and output*. Your code should include:
 
 1. Task 1: Complete the calculations with spark RDD, dataframe and SQL.
 
