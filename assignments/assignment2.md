@@ -14,7 +14,7 @@ Now follow the steps in the notebook to complete task 1. In the notebook, we loa
 
 ### Task 1 Deliverables
 
-In the jupyter notebook, write the code with spark RDD, spark dataframe, and spark SQL to complete the two calculations (number of plays per game and average yar s gained per game).
+In the jupyter notebook, write the code with spark RDD, spark dataframe, and spark SQL to complete the two calculations (number of plays per game and average yards gained per game).
 
 ## Task 2 - Data Analytics with Spark DataFrame and SQL
 
