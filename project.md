@@ -24,20 +24,20 @@ The objective of this group project is to use what we learned in this course to 
 
 > For all project deliverables, they should be submitted on Canvas by one of the team member
 
-* ***<u>Project Proposal (Due before Week 13 Consultations)</u>***: You will need to develop a <u>one-page proposal</u> of your project, to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. Submit your project proposal <u>three days before your consultation slot</u>. Note that the proposal is only a summary of your plan and progress, your actual progress doesn't have to be constrained by it.
-* ***<u>Project Consultation (Week 13)</u>***: Your team will make an appointment (30 mins) with instructor by choosing your time slots (which will be confirmed in Week 11). You will discuss your project with instructor, demonstrate your preliminary works, and get feedback on solving the problems. It is recommended that all team members join the consultation to demonstrate you are working as a whole team.
-* ***<u>Project Presentation (Week 15)</u>***: You will present your problem and analysis (insights) in the class. Your presentation date (April 20 or 22) will be determined by the section of the majority of team members. You are strongly encouraged to do live presentation, if possible; if you have special constraints or you are distance education students, you can do pre-recorded videos for presentation. Submit your presentation slides (and pre-recorded videos, if applicable) on the same day of your presentation. The order of presentation will be decided by lucky draw.
-* ***<u>Project Implementation (Due April 28)</u>***: You will refine your project after presentation and submit your final application (code, data, etc.) in the project as the deliverable of implementation.
-* ***<u>Project Report (Due April 28)</u>***: Based on your problems and insights, you will write a project report to motivate your problem, describe the dataset you use, present your findings and discuss the implications of your findings.
+* ***<u>Project Proposal (Due before Week 13 Consultations):</u>*** You will need to develop a <u>one-page proposal</u> of your project, to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. Submit your project proposal <u>three days before your consultation slot</u>. Note that the proposal is only a summary of your plan and progress, your actual progress doesn't have to be constrained by it.
+* ***<u>Project Consultation (Week 13):</u>*** Your team will make an appointment (30 mins) with instructor by choosing your time slots (which will be confirmed in Week 11). You will discuss your project with instructor, demonstrate your preliminary works, and get feedback on solving the problems. It is recommended that all team members join the consultation to demonstrate you are working as a whole team.
+* ***<u>Project Presentation (Week 15):</u>*** You will present your problem and analysis (insights) in the class. Your presentation date (April 20 or 22) will be determined by the section of the majority of team members. You are strongly encouraged to do live presentation, if possible; if you have special constraints or you are distance education students, you can do pre-recorded videos for presentation. Submit your presentation slides (and pre-recorded videos, if applicable) on the same day of your presentation. The order of presentation will be decided by lucky draw.
+* ***<u>Project Implementation (Due April 28):</u>*** You will refine your project after presentation and submit your final application (code, data, etc.) in the project as the deliverable of implementation.
+* ***<u>Project Report (Due April 28):</u>*** Based on your problems and insights, you will write a project report to motivate your problem, describe the dataset you use, present your findings and discuss the implications of your findings.
 
 ## Project Grading (40% in total)
 
 > Grades on Canvas will be 10 pts, 20 pts, 30 pts and 40 pts for each of the component, respectively. Then the total will be converted as 40% of final grade.
 
-* ***<u>Project Proposal (4%)</u>***: Please be concise on your proposal within one-page. <u>Contents exceeding one-page will not be graded.</u>
-* ***<u>Project Presentation (8%)</u>***: Presentation will be 15 mins for each group, including Q&A session. For either live or pre-recorded presentation, make you all of your team members have engagement in the presentation.
-* ***<u>Project Implementation (12%)</u>***: Your implementation (analysis and code) will take 8%, while the deployment of your application on the cluster will take 4%.
-* ***<u>Project Report (16%)</u>***: Your final report should include the following components: 
+* ***<u>Project Proposal (4%):</u>*** Please be concise on your proposal within one-page. <u>Contents exceeding one-page will not be graded.</u>
+* ***<u>Project Presentation (8%):</u>*** Presentation will be 15 mins for each group, including Q&A session. For either live or pre-recorded presentation, make you all of your team members have engagement in the presentation.
+* ***<u>Project Implementation (12%):</u>*** Your implementation (analysis and code) will take 8%, while the deployment of your application on the cluster will take 4%.
+* ***<u>Project Report (16%):</u>*** Your final report should include the following components: 
   * Abstract / summary of your report
   * The background and motivation of your questions
   * The dataset and analysis methods
