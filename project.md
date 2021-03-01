@@ -116,5 +116,5 @@ You can use any dataset you want for this project. In case you have troubles in 
   aws s3 cp msbx5420_team/team_directory s3://msbx5420-spr21/team_directory --recursive
   ```
 
-* To save or read data on S3 bucket with path `s3://msbx5420-spr21/team_directory/file.name`
+* Save or read data on S3 bucket with path `s3://msbx5420-spr21/team_directory/file.name`
 
