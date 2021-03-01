@@ -51,7 +51,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 * COVID-19 related data ([https://www.kaggle.com/datasets?topic=covidDataset](https://www.kaggle.com/datasets?topic=covidDataset))
 * AWS opendata ([https://registry.opendata.aws/](https://registry.opendata.aws/))
 * Weather data ([ftp://ftp.ncdc.noaa.gov/pub/data/gsod](ftp://ftp.ncdc.noaa.gov/pub/data/gsod))
-* AirBnb data ([http://insideairbnb.com/get-the-data.html](http://insideairbnb.com/get-the-data.html))
+* Airbnb data ([http://insideairbnb.com/get-the-data.html](http://insideairbnb.com/get-the-data.html))
 * Bike Share data ([https://www.citibikenyc.com/system-data](https://www.citibikenyc.com/system-data) or [https://www.lyft.com/bikes/bay-wheels/system-data](https://www.lyft.com/bikes/bay-wheels/system-data))
 * GitHub data ([https://www.githubarchive.org/](https://www.githubarchive.org/) or [https://ghtorrent.org/](https://ghtorrent.org/))
 * Bitcoin data ([https://www.kaggle.com/bigquery/bitcoin-blockchain](https://www.kaggle.com/bigquery/bitcoin-blockchain))
@@ -78,7 +78,7 @@ You can use any dataset you want for this project. In case you have troubles in 
   scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-18-236-188-82.us-west-2.compute.amazonaws.com:~/msbx5420/team_directory
   ```
 
-* You can also use Putty or FileZella to connect cluster and transfer files
+* You can also use Putty or FileZilla to connect cluster and transfer files
 
 ### Use Jupyter Notebook on Cluster
 
