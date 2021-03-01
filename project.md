@@ -35,7 +35,7 @@ The objective of this group project is to use what we learned in this course to 
 > Grades on Canvas will be 10 pts, 20 pts, 30 pts and 40 pts for each of the component, respectively. Then the total will be converted as 40% of final grade.
 
 * ***<u>Project Proposal (4%):</u>*** Please be concise on your proposal within one-page. <u>Contents exceeding one-page will not be graded.</u>
-* ***<u>Project Presentation (8%):</u>*** Presentation will be 15 mins for each group, including Q&A session. For either live or pre-recorded presentation, make you all of your team members have engagement in the presentation.
+* ***<u>Project Presentation (8%):</u>*** Presentation will be 15 mins for each group, including Q&A session. For either live or pre-recorded presentation, make sure all of your team members have engagement in the presentation.
 * ***<u>Project Implementation (12%):</u>*** Your implementation (analysis and code) will take 8%, while the deployment of your application on the cluster will take 4%.
 * ***<u>Project Report (16%):</u>*** Your final report should include the following components: 
   * Abstract / summary of your report
