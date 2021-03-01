@@ -67,11 +67,11 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Leeds AWS EMR Cluster: Leeds Technology Service created a 20-node AWS cluster for the project. 
 
-* Host address is ec2-18-236-188-82.us-west-2.compute.amazonaws.com
+* Host address is *ec2-18-236-188-82.us-west-2.compute.amazonaws.com*
 
 * Create your team directory under `msbx5420_teams` and copy your files to your team directory
 
-* Commands to access cluster and copy file from laptop to cluster (make sure your MSBX5420-SPR21.pem inside your current directory)
+* Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR21.pem` inside your current directory)
 
   ```bash
   ssh -i MSBX5420-SPR21.pem hadoop@ec2-18-236-188-82.us-west-2.compute.amazonaws.com
@@ -85,7 +85,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Use port forwarding to connect to JupyterHub
 
   ```bash
-  ssh -i ./MSBX5420-SPR21.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-18-236-188-82.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR21.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-18-236-188-82.us-west-2.compute.amazonaws.com
   ```
 
 * Create JupyterHub user for your team in the cluster master node
