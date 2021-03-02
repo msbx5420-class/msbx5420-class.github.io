@@ -50,9 +50,9 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * COVID-19 related data ([https://www.kaggle.com/datasets?topic=covidDataset](https://www.kaggle.com/datasets?topic=covidDataset))
 * AWS opendata ([https://registry.opendata.aws/](https://registry.opendata.aws/))
-* Weather data ([ftp://ftp.ncdc.noaa.gov/pub/data/gsod](ftp://ftp.ncdc.noaa.gov/pub/data/gsod))
+* Amazon review data ([http://jmcauley.ucsd.edu/data/amazon/](http://jmcauley.ucsd.edu/data/amazon/))
 * Airbnb data ([http://insideairbnb.com/get-the-data.html](http://insideairbnb.com/get-the-data.html))
-* Bike Share data ([https://www.citibikenyc.com/system-data](https://www.citibikenyc.com/system-data) or [https://www.lyft.com/bikes/bay-wheels/system-data](https://www.lyft.com/bikes/bay-wheels/system-data))
+* Bike share data ([https://www.citibikenyc.com/system-data](https://www.citibikenyc.com/system-data) or [https://www.lyft.com/bikes/bay-wheels/system-data](https://www.lyft.com/bikes/bay-wheels/system-data))
 * GitHub data ([https://www.githubarchive.org/](https://www.githubarchive.org/) or [https://ghtorrent.org/](https://ghtorrent.org/))
 * Bitcoin data ([https://www.kaggle.com/bigquery/bitcoin-blockchain](https://www.kaggle.com/bigquery/bitcoin-blockchain))
 * Lending data ([https://www.kaggle.com/wordsforthewise/lending-club](https://www.kaggle.com/wordsforthewise/lending-club) or [https://www.kiva.org/build/data-snapshots](https://www.kiva.org/build/data-snapshots))
@@ -63,7 +63,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Connect to AWS EMR Cluster
 
-> The AWS EMR cluster will be available from March 8 to May 7
+> The AWS EMR cluster for project will be available from March 8-10 to May 7
 
 * Leeds AWS EMR Cluster: Leeds Technology Service created a 20-node AWS cluster for the project. 
 
