@@ -22,7 +22,7 @@ The objective of this group project is to use what we learned in this course to 
 
 ## Project Timeline and Deliverable
 
-> For all project deliverables, they should be submitted on Canvas by one of the team member
+> For all project deliverables, they should be submitted on Canvas by one of the team members
 
 * ***<u>Project Proposal (Due before Week 13 Consultations):</u>*** You will need to develop a <u>one-page proposal</u> of your project, to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. Submit your project proposal <u>three days before your consultation slot</u>. Note that the proposal is only a summary of your plan and progress, your actual progress doesn't have to be constrained by it.
 * ***<u>Project Consultation (Week 13 Apr 5-11):</u>*** Your team will make an appointment (30 mins) with instructor by choosing your time slots (which will be confirmed in Week 11). You will discuss your project with instructor, demonstrate your preliminary works, and get feedback on solving the problems. It is recommended that all team members join the consultation to demonstrate you are working as a whole team.
