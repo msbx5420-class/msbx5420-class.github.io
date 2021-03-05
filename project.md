@@ -67,15 +67,15 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Leeds AWS EMR Cluster: Leeds Technology Service created a 20-node AWS cluster for the project. 
 
-* Host address is *ec2-18-236-188-82.us-west-2.compute.amazonaws.com*
+* Host address is *ec2-52-88-57-123.us-west-2.compute.amazonaws.com*
 
 * Create your team directory under `msbx5420_teams` and copy your files to your team directory
 
 * Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR21.pem` inside your current directory)
 
   ```bash
-  ssh -i MSBX5420-SPR21.pem hadoop@ec2-18-236-188-82.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-18-236-188-82.us-west-2.compute.amazonaws.com:~/msbx5420/team_directory
+  ssh -i MSBX5420-SPR21.pem hadoop@ec2-52-88-57-123.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-52-88-57-123.us-west-2.compute.amazonaws.com:/mnt1/msbx5420/team_directory
   ```
 
 * You can also use Putty or FileZilla to connect cluster and transfer files
@@ -99,8 +99,9 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Use HDFS on Cluster
 
-* Copy file from master node of cluster to HDFS under `/msbx5420_teams/team_name`
+* Copy files in `/mnt1/msbx5420/team_directory` from master node of cluster to HDFS under `/msbx5420_teams/team_name`
 * Save or read data in spark application with path `/msbx5420_teams/team_name/file.name`
+* Try to clean up your files on the master node after you put them to HDFS (or S3)
 
 ### Use AWS S3 Bucket on Cluster
 
