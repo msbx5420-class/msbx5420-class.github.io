@@ -67,15 +67,15 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Leeds AWS EMR Cluster: Leeds Technology Service created a 20-node AWS cluster for the project. 
 
-* Host address is *ec2-52-88-57-123.us-west-2.compute.amazonaws.com*
+* Host address is *ec2-52-12-169-6.us-west-2.compute.amazonaws.com*
 
 * Create your team directory under `msbx5420_teams` and copy your files to your team directory
 
 * Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR21.pem` inside your current directory)
 
   ```bash
-  ssh -i MSBX5420-SPR21.pem hadoop@ec2-52-88-57-123.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-52-88-57-123.us-west-2.compute.amazonaws.com:/mnt1/msbx5420/team_directory
+  ssh -i MSBX5420-SPR21.pem hadoop@ec2-52-12-169-6.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-52-12-169-6.us-west-2.compute.amazonaws.com:/mnt1/msbx5420/team_directory
   ```
 
 * You can also use Putty or FileZilla to connect cluster and transfer files
