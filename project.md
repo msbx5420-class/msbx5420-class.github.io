@@ -12,7 +12,7 @@ The objective of this group project is to use what we learned in this course to 
 
 ### Functional Requirements
 
-* Data Ingestion: Save your dataset into HDFS or AWS S3 as Parquet format. Read dataset from HDFS or S3 to do analysis.
+* Data Ingestion: Save your dataset into HDFS or Amazon S3 as Parquet format. Then read data from HDFS or S3 to do analysis.
 * Basic statistics and analysis of the ingested dataset and display your insights (use Jupyter notebook or other type of visualization)
 
 ### Performance Requirements
@@ -88,7 +88,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Use Jupyter Notebook on Cluster
 
-* Use port forwarding to connect to JupyterHub (or add `-f` to have persistent connection)
+* Use ssh port forwarding to connect to JupyterHub (or add `-f` to have persistent connection)
 
   ```bash
   ssh -i MSBX5420-SPR21.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-52-12-169-6.us-west-2.compute.amazonaws.com
@@ -104,6 +104,8 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Go to `https://localhost:8080` in browser and login with your team username and password; then create or upload your notebooks.
 
 * When you see security warning, click "Advanced" or "Details" to continue and bypass it. If you are using MacOS Catalina with Chrome, blindly type `thisisunsafe` in the page and press `enter` to bypass it.
+
+* To run PySpark program, use the kernel `PySaprk` for notebook. If you need additional python packages, let the instructor know as early as possible.
 
 ### Use HDFS on Cluster
 
