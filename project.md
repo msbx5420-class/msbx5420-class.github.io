@@ -6,7 +6,7 @@ The objective of this group project is to use what we learned in this course to 
 
 ### Basic Requirements
 
-* Dataset: You can use any dataset in the project. However, your data should have substantial size. Larger datasets are encouraged but not required. Datasets below 10MB are not allowed. Some suggested datasets are provided; you can use your own data if you would like.
+* Dataset: You can use any dataset in the project. However, your data should have substantial size. Datasets below 10MB are not allowed. Some suggested datasets are provided; you can use your own data if you would like.
 * Environment: You can use Docker or MyBinder to test your code. In the end, you are required to use AWS EMR cluster to run your analysis.
 * Programming Language: Use Spark with Python (PySpark)
 
