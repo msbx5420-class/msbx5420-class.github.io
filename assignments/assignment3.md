@@ -4,7 +4,7 @@ In this assignment, you are required to work on three tasks - (1) train topic mo
 
 The dataset we will use in this assignment is IMDB movie reviews dataset (50K reviews). The dataset can be downloaded together with the notebook on Canvas. The data is sample with only two columns, one is the review text, and the other is sentiment label.
 
-You are suggested to use docker to work on the task. If you don't have docker available, or you want to speed up the machine learning training process, you can use MyBinder and EMR cluster (both the small and large clusters are available now). *If you use EMR cluster, for task 3, you will have to adjust the code for saving files in task 3 (i.e., you need to save the small files for streaming into a HDFS or S3 directory rather than a local directory), so be careful and consult with instructor if you have any issues.*
+You are suggested to use docker to work on the task. If you don't have docker available, or you want to speed up the machine learning training process, you can use MyBinder and EMR cluster (both the small and large clusters are available now). *The code was developed with docker environment - if you use EMR cluster, you will have to adjust the code for reading and saving files, especially for task 3 (i.e., you need to read data and save the small files for streaming with HDFS or S3 directory rather than a local directory), so be careful on the file paths and consult the instructor if you encounter any issues. Please follow the rules to create the directories if you intend to use the second cluster created for project.*
 
 ## Task 1 - Topic Modeling with LDA
 
