@@ -63,29 +63,35 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Connect to AWS EMR Cluster
 
-> The AWS EMR cluster for project will be available from March 8-10 to May 7
+> The AWS EMR cluster for project is available from March 8 to May 7
 
 * Leeds AWS EMR Cluster: Leeds Technology Service created a 20-node AWS cluster for the project. 
 
 * Host address is *ec2-52-12-169-6.us-west-2.compute.amazonaws.com*
 
-* Create your team directory under `msbx5420_teams` and copy your files to your team directory
+* Private key files are same with the first cluster - `MSBX5420-SPR21.pem` and `MSBX5420-SPR21.ppk`
+
+* Create your team directory under absolute path `/mnt1/msbx5420_teams` and copy your files to your team directory
+
+* All personal directories are under `/mnt1/msbx5420` and all team directories are under `/mnt1/msbx5420_teams`
+
+* Please follow the rules to create directories. Try not to use the directories under user directory `~` when you upload large files; it will overload the disk size of master node.
 
 * Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR21.pem` inside your current directory)
 
   ```bash
   ssh -i MSBX5420-SPR21.pem hadoop@ec2-52-12-169-6.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-52-12-169-6.us-west-2.compute.amazonaws.com:/mnt1/msbx5420/team_directory
+  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-52-12-169-6.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
   ```
 
-* You can also use Putty or FileZilla to connect cluster and transfer files
+* You can also use Putty or FileZilla to connect cluster, forward port and transfer files (with `MSBX5420-SPR21.ppk`)
 
 ### Use Jupyter Notebook on Cluster
 
-* Use port forwarding to connect to JupyterHub
+* Use port forwarding to connect to JupyterHub (or add `-f` to have persistent connection)
 
   ```bash
-  ssh -i MSBX5420-SPR21.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-18-236-188-82.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR21.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-52-12-169-6.us-west-2.compute.amazonaws.com
   ```
 
 * Create JupyterHub user for your team in the cluster master node
@@ -97,25 +103,30 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Go to `https://localhost:8080` in browser and login with your team username and password; then create or upload your notebooks.
 
+* When you see security warning, click "Advanced" or "Details" to continue and bypass it. If you are using MacOS Catalina with Chrome, blindly type `thisisunsafe` in the page and press `enter` to bypass it.
+
 ### Use HDFS on Cluster
 
-* Copy files in `/mnt1/msbx5420/team_directory` from master node of cluster to HDFS under `/msbx5420_teams/team_name`
-* Save or read data in spark application with path `/msbx5420_teams/team_name/file.name`
+* Create your team directory in HDFS under `/msbx5420_teams/team_directory`
+* Copy files in `/mnt1/msbx5420_teams/team_directory` from master node of cluster to HDFS under `/msbx5420_teams/team_directory`
+* Save or read data in spark application with HDFS path `/msbx5420_teams/team_directory/file.name`
 * Try to clean up your files on the master node after you put them to HDFS (or S3)
 
 ### Use AWS S3 Bucket on Cluster
 
-* Our S3 bucket on cluster is `msbx5420-spr21`
+* Our S3 bucket on cluster is `s3://msbx5420-spr21`
+
+* HDFS storage is limited in the cluster, so if HDFS is not available, upload your file to S3 bucket, which is similar
 
 * To check files and copy files to S3 bucket, you can use the following commands (make sure you have created your team directory on master node)
 
   ```bash
   aws s3 ls s3://msbx5420-spr21
   #copy single file
-  aws s3 cp msbx5420_team/team_directory/file.name s3://msbx5420-spr21/team_directory/
+  aws s3 cp /mnt1/msbx5420_teams/team_directory/file.name s3://msbx5420-spr21/team_directory/
   #copy the entire directory
-  aws s3 cp msbx5420_team/team_directory s3://msbx5420-spr21/team_directory --recursive
+  aws s3 cp /mnt1/msbx5420_teams/team_directory s3://msbx5420-spr21/team_directory --recursive
   ```
 
-* Save or read data on S3 bucket with path `s3://msbx5420-spr21/team_directory/file.name`
+* Save or read data on S3 bucket with S3 path `s3://msbx5420-spr21/team_directory/file.name`
 
