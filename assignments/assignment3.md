@@ -1,6 +1,6 @@
 # MSBX 5420 Assignment 3
 
-In this assignment, you are required to work on three tasks - (1) train topic model (LDA) with Spark ML and refine the model, (2) predict review sentiment with Spark ML, (3) combine spark machine learning and spark streaming to predict review in real time. The tasks are described below, and what you need to do is to complete the missing code in the jupyter notebook assignment3.ipynb and submit the notebook.
+In this assignment, you are required to work on three tasks - (1) train topic model (LDA) with Spark ML and refine the model, (2) predict review sentiment with Spark ML, (3) combine spark machine learning and spark streaming to predict review in real time. The tasks are described below, and what you need to do is to complete the missing code in the jupyter notebook *assignment3.ipynb* and submit the notebook.
 
 The dataset we will use in this assignment is IMDB movie reviews dataset (50K reviews). The dataset can be downloaded together with the notebook on Canvas. The data is sample with only two columns, one is the review text, and the other is sentiment label.
 
