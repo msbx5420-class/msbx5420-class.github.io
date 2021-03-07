@@ -16,7 +16,7 @@ The first task we are going to train topic model on movie reviews with LDA model
 
 (3) We improve the model by limiting the minimum word frequency in the vector and train the model with pipeline again.
 
-(4) We use TF-IDF vector to train with ML pipeline and then compare the topics.
+(4) We then improve the vector by using TF-IDF vector to train with ML pipeline and then compare the topics.
 
 ### Task 1 Deliverables
 
