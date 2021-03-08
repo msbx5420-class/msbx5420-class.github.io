@@ -120,7 +120,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * HDFS storage is limited in the cluster, so if HDFS is not available, upload your file to S3 bucket, which is similar
 
-* Also data stored in S3 can be shared across clusters, so if you use both clusters, S3 can be more convenient
+* Also data stored in S3 can be shared across clusters, so if you use both clusters, S3 can be more convenient. That is, S3 doesn't rely on the cluster, so if there is any issue on the cluster, what you save on S3 won't lose.
 
 * To check files and copy files to S3 bucket, you can use the following commands (make sure you have created your team directory on master node)
 
