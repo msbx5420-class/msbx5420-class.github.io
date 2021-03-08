@@ -126,6 +126,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
   ```bash
   aws s3 ls s3://msbx5420-spr21
+  aws s3 ls s3://msbx5420-spr21/msbx5420_teams/team_directory/
   #copy single file, the last / is required
   aws s3 cp /mnt1/msbx5420_teams/team_directory/file.name s3://msbx5420-spr21/team_directory/
   #copy the entire directory
