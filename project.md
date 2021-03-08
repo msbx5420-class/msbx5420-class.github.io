@@ -67,7 +67,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Leeds AWS EMR Cluster: Leeds Technology Service created a 20-node AWS cluster for the project. 
 
-* Host address is *ec2-52-12-169-6.us-west-2.compute.amazonaws.com*
+* Host address is *ec2-52-40-141-205.us-west-2.compute.amazonaws.com*
 
 * Private key files are same with the first cluster - `MSBX5420-SPR21.pem` and `MSBX5420-SPR21.ppk`
 
@@ -75,13 +75,13 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * All personal directories are under `/mnt1/msbx5420` and all team directories are under `/mnt1/msbx5420_teams`
 
-* Please follow the rules to create directories. Try not to use the directories under user directory `~` when you upload large files; it will overload the disk size of master node.
+* Please follow the rules to use cluster and create directories. Try not to use the directories under user directory `~` when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under user directory will be migrated to `/mnt1`.
 
 * Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR21.pem` inside your current directory)
 
   ```bash
-  ssh -i MSBX5420-SPR21.pem hadoop@ec2-52-12-169-6.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-52-12-169-6.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR21.pem hadoop@ec2-52-40-141-205.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-52-40-141-205.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
   ```
 
 * You can also use Putty or FileZilla to connect cluster, forward port and transfer files (with `MSBX5420-SPR21.ppk`)
@@ -91,7 +91,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Use ssh port forwarding to connect to JupyterHub (or add `-f` to have persistent connection)
 
   ```bash
-  ssh -i MSBX5420-SPR21.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-52-12-169-6.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR21.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-52-40-141-205.us-west-2.compute.amazonaws.com
   ```
 
 * Create JupyterHub user for your team in the cluster master node
@@ -119,6 +119,8 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Our S3 bucket on cluster is `s3://msbx5420-spr21`
 
 * HDFS storage is limited in the cluster, so if HDFS is not available, upload your file to S3 bucket, which is similar
+
+* Also data stored in S3 can be shared across clusters, so if you use both clusters, S3 can be more convenient
 
 * To check files and copy files to S3 bucket, you can use the following commands (make sure you have created your team directory on master node)
 
