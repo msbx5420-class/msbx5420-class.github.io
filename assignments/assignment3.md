@@ -46,7 +46,7 @@ Then we read stream from this directory and apply machine learning model on the 
 
 ### Task 3 Deliverables
 
-Complete the missing code to build this streaming application with machine learning model; after starting the streaming for 5 minutes, run the SQL queries to display the real-time results in the notebook. Then stop the queries to finish streaming and save your notebook.
+Complete the missing code to build this streaming application with machine learning model; after starting the streaming for 3-5 minutes, run the SQL queries to track and display the real-time results in the notebook. Then stop the queries to finish streaming and save your notebook.
 
 ## Notes and Rules
 
@@ -62,7 +62,7 @@ You will need to submit the *jupyter notebook assignment3.ipynb with your comple
 
 1. Task 1: Complete the code for spark ML pipeline and output the topics from each LDA model
 2. Task 2: Complete the code for training and evaluating sentiment analysis models, and output the model performance metrics of prediction
-3. Task 3: Complete the code for streaming analysis with machine learning, and output the query results after 5 minutes
+3. Task 3: Complete the code for streaming analysis with machine learning, and output the query results after 3-5 minutes
 
 ### Rules
 
