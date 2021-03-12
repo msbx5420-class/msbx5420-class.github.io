@@ -62,9 +62,9 @@ You will submit one jupyter notebook file in Canvas.
 
 You will need to submit the *jupyter notebook assignment3.ipynb with your completed code and output*. Your code should include:
 
-1. Task 1: Complete the code for spark ML pipeline and output the topics from each LDA model
-2. Task 2: Complete the code for training and evaluating sentiment analysis models, and output the model performance metrics of prediction
-3. Task 3: Complete the code for streaming analysis with machine learning, and output the query results after 3-5 minutes
+1. Task 1: Complete the code for spark ML pipeline and output the topics from each LDA model. You have 3 missing codes to complete.
+2. Task 2: Complete the code for training and evaluating sentiment analysis models, and output the model performance metrics of prediction. You have 3 missing codes to complete.
+3. Task 3: Complete the code for streaming analysis with machine learning, and output the query results after 3-5 minutes. You have 2 missing codes to complete.
 
 ### Rules
 
