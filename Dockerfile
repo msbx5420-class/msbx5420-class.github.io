@@ -3,7 +3,8 @@ COPY notebooks ${HOME}
 USER root
 RUN apt-get -y update
 RUN apt-get -y install mariadb-server
-RUN service mariadb start
+RUN systemctl enable mariadb
+RUN systemctl start mariadb
 RUN wget https://github.com/datacharmer/test_db/archive/master.zip
 RUN unzip master.zip
 RUN mysql -u root < test_db-master/employees.sql
