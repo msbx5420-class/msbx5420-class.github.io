@@ -1,4 +1,4 @@
-FROM jupyter/pyspark-notebook:42f4c82a07ff
+FROM jupyter/pyspark-notebook:d990a62010ae
 COPY notebooks ${HOME}
 USER root
 RUN apt-get update -y
