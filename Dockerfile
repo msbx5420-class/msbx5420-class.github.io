@@ -4,7 +4,8 @@ USER root
 RUN apt-get -y update
 RUN apt-get -y install mariadb-server
 RUN /etc/init.d/mysql start
-RUN ln -s /tmp/mysql.sock /var/lib/mysql/mysql.sock
+RUN mkdir -p /var/run/mysqld
+RUN mysql:mysql /var/run/mysqld
 RUN service mysql restart
 RUN wget https://github.com/datacharmer/test_db/archive/master.zip
 RUN unzip master.zip
