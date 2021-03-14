@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# Start MySQL server
-sudo /etc/init.d/mysql start
-
-exec "$@"
