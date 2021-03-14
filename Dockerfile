@@ -8,8 +8,8 @@ RUN apt-get -y update && \
     unzip master.zip && \
     cd test_db-master && mysql -u root < employees.sql && cd .. && rm master.zip && rm -rf test_db-master && \
     mysql -u root -Bse "use mysql;CREATE USER 'admin'@'localhost' IDENTIFIED BY 'Admin_01';GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';FLUSH PRIVILEGES;" && \
-    echo "${NB_USER} ALL=/sbin//etc/init.d/mysql start" >> /etc/sudoers && \
-    echo "${NB_USER} ALL=/sbin//etc/init.d/mysql stop" >> /etc/sudoers && \
-    echo "${NB_USER} ALL=/sbin//etc/init.d/mysql restart" >> /etc/sudoers
+    echo "${NB_USER} ALL=/etc/init.d/mysql start" >> /etc/sudoers && \
+    echo "${NB_USER} ALL=/etc/init.d/mysql stop" >> /etc/sudoers && \
+    echo "${NB_USER} ALL=/etc/init.d/mysql restart" >> /etc/sudoers
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
