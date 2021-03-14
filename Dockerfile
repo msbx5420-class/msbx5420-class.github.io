@@ -2,10 +2,8 @@ FROM jupyter/pyspark-notebook:d990a62010ae
 COPY notebooks ${HOME}
 USER root
 RUN apt-get -y update
-RUN apt-get -y install systemd
 RUN apt-get -y install mariadb-server
-RUN systemctl enable mariadb
-RUN systemctl start mariadb
+RUN /etc/init.d/mariadb start
 RUN wget https://github.com/datacharmer/test_db/archive/master.zip
 RUN unzip master.zip
 RUN mysql -u root < test_db-master/employees.sql
