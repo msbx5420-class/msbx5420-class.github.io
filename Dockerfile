@@ -2,11 +2,7 @@ FROM jupyter/pyspark-notebook:d990a62010ae
 COPY notebooks ${HOME}
 USER root
 RUN apt-get -y update
-RUN apt-get -y purge mysql*
-RUN apt-get -y autoremove
-RUN apt-get -y autoclean
-RUN apt-get -y dist-upgrade
-RUN apt-get -y install mysql-server
+RUN apt-get -y install mariadb-server
 RUN /etc/init.d/mysql start
 RUN wget https://github.com/datacharmer/test_db/archive/master.zip
 RUN unzip master.zip
