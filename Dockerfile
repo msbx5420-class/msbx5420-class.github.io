@@ -4,12 +4,11 @@ USER root
 RUN apt-get -y update
 RUN apt-get -y install mariadb-server
 RUN /etc/init.d/mysql start
-RUN mkdir -p /var/run/mysqld
-RUN chmod mysql:mysql /var/run/mysqld
-RUN service mysql restart
 RUN wget https://github.com/datacharmer/test_db/archive/master.zip
 RUN unzip master.zip
-RUN mysql -u root < test_db-master/employees.sql
+RUN cd test_db-master
+RUN mysql -u root < employees.sql
+RUN cd ..
 RUN mysql -u root -Bse "use mysql;CREATE USER 'admin'@'localhost' IDENTIFIED BY 'Admin_01';GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';FLUSH PRIVILEGES;"
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
