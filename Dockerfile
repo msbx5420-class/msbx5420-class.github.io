@@ -2,7 +2,7 @@ FROM jupyter/pyspark-notebook:42f4c82a07ff
 COPY notebooks ${HOME}
 USER root
 RUN apt-get update -y
-RUN apt-get -y install mysql-server
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-server
 RUN /etc/init.d/mysql start
 RUN wget https://github.com/datacharmer/test_db/archive/master.zip
 RUN unzip master.zip
