@@ -6,7 +6,7 @@ RUN apt-get -y update && \
     /etc/init.d/mysql start && \
     wget https://github.com/datacharmer/test_db/archive/master.zip && \
     unzip master.zip && \
-    cd test_db-master && mysql -u root < employees.sql && cd ..
-RUN mysql -u root -Bse "use mysql;CREATE USER 'admin'@'localhost' IDENTIFIED BY 'Admin_01';GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';FLUSH PRIVILEGES;"
+    cd test_db-master && mysql -u root < employees.sql && cd .. && \
+    mysql -u root -Bse "use mysql;CREATE USER 'admin'@'localhost' IDENTIFIED BY 'Admin_01';GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';FLUSH PRIVILEGES;"
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
