@@ -2,7 +2,6 @@ FROM jupyter/pyspark-notebook:d990a62010ae
 COPY notebooks ${HOME}
 USER root
 RUN apt-get update -y
-RUN apt-get upgrade -y
 RUN apt-get -y install mysql-server
 RUN /etc/init.d/mysql start
 RUN wget https://github.com/datacharmer/test_db/archive/master.zip
