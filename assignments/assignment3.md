@@ -10,7 +10,7 @@ You are suggested to use docker to work on the task. If you don't have docker av
 
 In the first task we are going to train topic model on movie reviews with LDA model. The code in the notebook includes the following steps for task 1:
 
-(1) Clean the text, by removing html tags, special characters and line breaks; then tokenize the text and remove stopwords.
+(1) Clean the text, by removing html tags, special characters and line breaks; then tokenize the text and remove stop words.
 
 (2) Train a regular LDA model with Spark ML pipeline and display the topics. Here we use term frequency vector to train the model. *You will build a ML pipeline to train LDA model.*
 
