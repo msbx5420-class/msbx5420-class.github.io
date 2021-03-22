@@ -67,7 +67,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Leeds AWS EMR Cluster: Leeds Technology Service created a 20-node AWS cluster for the project. 
 
-* Host address is *ec2-54-213-154-211.us-west-2.compute.amazonaws.com*
+* Host address is *ec2-34-216-218-24.us-west-2.compute.amazonaws.com*
 
 * Private key files are same with the first cluster - `MSBX5420-SPR21.pem` and `MSBX5420-SPR21.ppk`
 
@@ -80,8 +80,8 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR21.pem` inside your current directory)
 
   ```bash
-  ssh -i MSBX5420-SPR21.pem hadoop@ec2-54-213-154-211.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-54-213-154-211.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR21.pem hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
   ```
 
 * You can also use Putty or FileZilla to connect cluster, forward port and transfer files (with `MSBX5420-SPR21.ppk`)
@@ -91,7 +91,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Use ssh port forwarding to connect to JupyterHub (or add `-f` to have persistent connection)
 
   ```bash
-  ssh -i MSBX5420-SPR21.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-54-213-154-211.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR21.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
   ```
 
 * Create JupyterHub user for your team in the cluster master node
