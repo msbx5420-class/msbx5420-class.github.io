@@ -75,7 +75,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * All personal directories are under `/mnt1/msbx5420` and all team directories are under `/mnt1/msbx5420_teams`
 
-* Please follow the rules to use cluster and create directories. Try not to use the directories under user directory `~` when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under user directory will be migrated to `/mnt1`.
+* Please follow the rules to use cluster and create directories. Try not to use the directories under user directory `~` when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under user directory will be migrated to `/mnt1/msbx5420_teams`.
 
 * Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR21.pem` inside your current directory)
 
