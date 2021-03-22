@@ -65,7 +65,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 > The AWS EMR cluster for project is available from March 8 to May 7
 
-* Leeds AWS EMR Cluster: Leeds Technology Service created a 20-node AWS cluster for the project. 
+* Leeds AWS EMR Cluster: Leeds Technology Service created a larger AWS cluster for the project. 
 
 * Host address is *ec2-34-216-218-24.us-west-2.compute.amazonaws.com*
 
