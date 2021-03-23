@@ -36,7 +36,7 @@ Specifically, we are going to do the following steps in task 2:
 
 (3) Identify communities with significant conflicts (negative sentiment in the post with hyperlinks) by querying the edges. *You will calculate the average sentiment based on the instruction in the notebook and display pairs of communities with top negative sentiment.*
 
-(4) Assume you are a random walker in reddit, find the shortest paths from *`leagueoflegends`* community to *`politics`* community. *You will identify the shortest paths between the two communities following the instruction in the notebook through both **breath-first search** and **motif finding**.*
+(4) Assume you are a random walker in reddit, find the shortest paths from *`leagueoflegends`* community (*League of Legends* is a Multiplayer Online Battle Arena (MOBA) e-sports video game) to *`politics`* community. *You will identify the shortest paths between the two communities following the instruction in the notebook through both **breath-first search** and **motif finding**.*
 
 ### Task 2 Deliverables
 
