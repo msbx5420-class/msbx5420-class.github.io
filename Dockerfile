@@ -1,4 +1,4 @@
-FROM jupyter/pyspark-notebook:2ba4fb6b1227
+FROM jupyter/pyspark-notebook:d990a62010ae
 COPY notebooks ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
