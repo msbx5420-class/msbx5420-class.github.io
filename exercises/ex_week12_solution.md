@@ -7,6 +7,7 @@ docker pull redis
 docker run --name my_redis -d redis
 docker exec -it my_redis bash
 
+#get into redis shell
 redis-cli
 SET mykey value
 GET mykey
@@ -48,6 +49,7 @@ HGETALL user.3.movies
 HGET user.3.movies title
 
 select 2
+exit
 ```
 
 ## NoSQL - MongoDB
@@ -59,6 +61,7 @@ docker pull mongo
 docker run --name my_mongo -d mongo
 docker exec -it my_mongo bash
 
+#get into mongodb shell
 mongo
 show dbs
 use mydb
@@ -91,6 +94,8 @@ db.mycollection_2.remove({'name':'my_mongodb'})
 db.mycollection_1.find({'by':'zhiyiwang', 'title':'My MongoDB Test'}).pretty()
 db.mycollection_1.find({$or:[{'by':'zhiyiwang'},{'title': 'My MongoDB Test'}]}).pretty()
 db.mycollection_1.find({'likes': {$gt:50}, $or: [{'by': 'zhiyiwang'},{'title': 'My MongoDB Test'}]}).pretty()
+
+exit
 ```
 
 ## Spark with NoSQL (MongoDB)
@@ -101,6 +106,7 @@ docker network create --driver=bridge nosql-net
 #change the path to your own
 docker run --net=nosql-net -p 8088:8888 -v /mnt/c/Users/zhiyiwang/Dropbox/CU/Teaching/MSBX5420/exercises:/home/jovyan/exercises jupyter/pyspark-notebook
 
+#in another terminal
 docker run -d --net=nosql-net --name my_mongo --hostname my-mongodb mongo
 docker exec -it my_mongo bash
 apt-get update
