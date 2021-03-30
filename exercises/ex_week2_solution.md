@@ -1,4 +1,4 @@
-## Exercise 1 Solutions
+## Week 2 Exercise Solutions
 
 ### Linux Command Practice
 

@@ -1,4 +1,4 @@
-# Exercise 3 Week 4 - Practice Hadoop and MapReduce
+# Week 4 Exercise - Practice Hadoop and MapReduce
 
 ## Activity 1
 
