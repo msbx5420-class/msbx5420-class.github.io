@@ -1,13 +1,11 @@
 # Week 12 Exercise - Practice NoSQL Databases
 
-## Redis
-
-First start with the redis container
+## NoSQL - Redis
 
 ```bash
 docker pull redis
 docker run --name my_redis -d redis
-docker exec -it my_redis sh
+docker exec -it my_redis bash
 
 redis-cli
 SET mykey value
@@ -48,16 +46,18 @@ HGET myhash field1
 HSET user.3.movies movie_id 3 title "Avengers" genre "Action" year 2012
 HGETALL user.3.movies 
 HGET user.3.movies title
+
+select 2
 ```
 
-## MongoDB
+## NoSQL - MongoDB
 
 More HDFS operations
 
 ```bash
 docker pull mongo
 docker run --name my_mongo -d mongo
-docker exec -it my_mongo sh
+docker exec -it my_mongo bash
 
 mongo
 show dbs
@@ -93,22 +93,18 @@ db.mycollection_1.find({$or:[{'by':'zhiyiwang'},{'title': 'My MongoDB Test'}]}).
 db.mycollection_1.find({'likes': {$gt:50}, $or: [{'by': 'zhiyiwang'},{'title': 'My MongoDB Test'}]}).pretty()
 ```
 
-## Activity 3
+## Spark with NoSQL (MongoDB)
 
-Start to run python code
-
-
-
-## Spark with NoSQL
-
-```
+```bash
 docker network create --driver=bridge nosql-net
-docker run -itd --net=nosql-net -p 50070:50070 -p 8088:8088 --name hadoop-master --hostname hadoop-master kiwenlau/hadoop:1.0
 
-docker network create --driver=bridge hadoop
-#start hadoop master container
-docker run -itd --net=hadoop -p 50070:50070 -p 8088:8088 --name hadoop-master --hostname hadoop-master kiwenlau/hadoop:1.0
-#start hadoop slave container
-docker run -itd --net=hadoop --name hadoop-slave1 --hostname hadoop-slave1 kiwenlau/hadoop:1.0
-docker run -itd --net=hadoop --name hadoop-slave2 --hostname hadoop-slave2 kiwenlau/hadoop:1.0
+#change the path to your own
+docker run --net=nosql-net -p 8088:8888 -v /mnt/c/Users/zhiyiwang/Dropbox/CU/Teaching/MSBX5420/exercises:/home/jovyan/exercises jupyter/pyspark-notebook
+
+docker run -d --net=nosql-net --name my_mongo --hostname my-mongodb mongo
+docker exec -it my_mongo bash
+apt-get update
+apt-get install wget
+wget https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/inventory.crud.json
+mongoimport --db my_test --collection inventory --drop --file inventory.crud.json
 ```
