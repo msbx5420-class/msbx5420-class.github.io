@@ -54,8 +54,6 @@ exit
 
 ## NoSQL - MongoDB
 
-More HDFS operations
-
 ```bash
 docker pull mongo
 docker run --name my_mongo -d mongo
