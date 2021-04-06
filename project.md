@@ -71,7 +71,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Private key files are same with the first cluster - `MSBX5420-SPR21.pem` and `MSBX5420-SPR21.ppk`
 
-* Create your team directory under absolute path `/mnt1/msbx5420_teams` **first** and then copy your files to your team directory with `scp`
+* Create your team directory under absolute path `/mnt1/msbx5420_teams` first and then copy your files to your team directory with `scp`
 
 * All personal directories are under `/mnt1/msbx5420` and all team directories are under `/mnt1/msbx5420_teams`
 
