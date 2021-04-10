@@ -94,7 +94,7 @@ You can use any dataset you want for this project. In case you have troubles in 
   ssh -i MSBX5420-SPR21.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
   ```
 
-* Create JupyterHub user for your team in the cluster master node
+* Create JupyterHub user for your team <u>on the cluster master node</u>
 
   ```bash
   sudo docker exec jupyterhub useradd -m -s /bin/bash -N username
