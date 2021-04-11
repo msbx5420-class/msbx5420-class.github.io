@@ -107,7 +107,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * To run PySpark program, use the kernel `PySaprk` for notebook. If you need additional python packages, let the instructor know as early as possible.
 
-* In the notebook, make sure you specify `spark://spark-master:7077` or `yarn` in `master()` , rather than using `local`
+* In the notebook, make sure you specify `spark://spark-master:7077` or `yarn` in `master()` rather than using `local`
 
 ###  Use HDFS on Cluster
 
