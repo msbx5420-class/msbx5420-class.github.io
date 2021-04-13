@@ -109,6 +109,8 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * In the notebook, make sure you specify `spark://spark-master:7077` or `yarn` in `master()` rather than using `local`
 
+* Please avoid uploading files in JupyterHub. The files you read from JupyterHub cannot be run by PySpark and running analysis directly from the file will overload the master node.
+
 ###  Use HDFS on Cluster
 
 * Create your team directory in HDFS under `/msbx5420_teams/team_directory`
