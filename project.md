@@ -17,7 +17,7 @@ The objective of this group project is to use what we learned in this course to 
 
 ### Performance Requirements
 
-* You can test your application or analysis on your laptop with Docker or on MyBinder
+* You can test your application or analysis on your laptop with Docker or on MyBinder; you are suggested to make sure your code work on Docker first then run it on the cluster.
 * With your application deployed on the cluster, your implementation should show horizontal scale (i.e., when adding more nodes the cluster, the processing should be faster) and take advantage of distributed computing.
 
 ## Project Timeline and Deliverable
