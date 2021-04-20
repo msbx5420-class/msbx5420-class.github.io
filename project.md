@@ -93,9 +93,9 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Commands to access cluster, upload files and connect JupyterHub
 
   ```
-  ssh -i MSBX5420-SPR21.pem hadoop@ec2-52-38-215-200.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-52-38-215-200.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
-  ssh -i MSBX5420-SPR21.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-52-38-215-200.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR21.pem hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR21.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
   ```
 
 * The backup cluster shares the same AWS S3 bucket with main cluster; the procedure of using HDFS is same with main cluster. If you read data from HDFS, you can upload data to cluster and put into HDFS in the same way; if you read data from S3, you don't need to do additional steps
