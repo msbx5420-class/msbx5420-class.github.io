@@ -88,7 +88,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 > If the main cluster is crowded and hard to get access, you can use a smaller backup cluster below; but still, make sure your code has been tested locally with anaconda or docker first.
 
-* The backup cluster host address is ec2-54-188-122-165.us-west-2.compute.amazonaws.com*
+* The backup cluster host address is *ec2-54-188-122-165.us-west-2.compute.amazonaws.com*
 
 * Commands to access cluster, upload files and connect JupyterHub
 
