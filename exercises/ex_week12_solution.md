@@ -46,10 +46,10 @@ HGET myhash field1
 
 HSET user.3.movies movie_id 3 title "Avengers" genre "Action" year 2012
 HGETALL user.3.movies 
-HGET user.3.movies genre
+HGET user.3.movies title
 
 #select 2
-exits
+exit
 ```
 
 ## NoSQL - MongoDB
