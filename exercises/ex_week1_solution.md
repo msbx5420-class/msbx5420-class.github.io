@@ -1,6 +1,6 @@
 ## Week 1 Exercise Solutions
 
-If you need to copy-paste these commands, please visit https://msbx5420-class.github.io/exercises/ex1_week1.html for the same online version, which creates fewer problems when copy-pasting commands.
+If you need to copy-paste these commands, please visit https://msbx5420-class.github.io/exercises/ex_week1_solution.html for the same online version, which creates fewer problems when copy-pasting commands.
 
 ### Linux Command Practice
 
@@ -30,15 +30,15 @@ cd ..
 docker pull jupyter/base-notebook
 docker run –p 8888:8888 jupyter/base-notebook
 #locate the token in terminal
-#visit localhost:8888 and paste the token; use 8889 if 8888 not working
+#visit localhost:8888 and paste the token; use 8889 if 8888 is not working
 #now you can't do anything on the original terminal - open a new terminal window
 #unzip ex1_week1.zip file so two files are under ex1_week1 folder
 #check container id
 docker ps
 #[IMPORTANT] everytime you see {...}, it is specific to your local computer, so you need to change {...} to your own path, folder name, or container id
-#[IMPORTANT] paths in Windows typically look like C:\Users\{username}\... paths in MacOS or Linux typically look like /Users/{username}/...
-docker cp {your_local_path}/word_count_python.ipynb {docker_container_id}:/home/jovyan/word_count_python.ipynb
-docker cp {your_local_path}/big_data_intro.txt {docker_container_id}:/home/jovyan/big_data_intro.txt
+#[IMPORTANT] paths in Windows typically look like C:\Users\{username}\... paths in MacOS or Linux typically look like /Users/{username}/... you can copy path from file explorer or finder, or drag file into the terminal window to obtain the file path
+docker cp {your_local_path}/ex1_week1/word_count_python.ipynb {docker_container_id}:/home/jovyan/word_count_python.ipynb
+docker cp {your_local_path}/ex1_week1/big_data_intro.txt {docker_container_id}:/home/jovyan/big_data_intro.txt
 #after you run the notebook, you can copy the notebook back to your local file system
 docker cp {docker_container_id}:/home/jovyan/word_count_python.ipynb {your_local_path}/word_count_python_results.ipynb
 ```
