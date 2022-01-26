@@ -6,7 +6,7 @@ If you need to copy-paste these commands, please visit https://msbx5420-class.gi
 
 ```bash
 docker pull ubuntu
-docker run –it ubuntu
+docker run -it ubuntu
 pwd
 ls
 mkdir msbx5420_ex1
@@ -28,7 +28,7 @@ cd ..
 
 ```bash
 docker pull jupyter/base-notebook
-docker run –p 8888:8888 jupyter/base-notebook
+docker run -p 8888:8888 jupyter/base-notebook
 #locate the token in terminal
 #visit localhost:8888 and paste the token; use 8889 if 8888 is not working
 #now you can't do anything on the original terminal - open a new terminal window
@@ -42,6 +42,8 @@ docker cp {your_local_path}/ex1_week1/big_data_intro.txt {docker_container_id}:/
 #after you run the notebook, you can copy the notebook back to your local file system
 docker cp {docker_container_id}:/home/jovyan/word_count_python.ipynb {your_local_path}/word_count_python_results.ipynb
 ```
+
+
 
 ```bash
 #use docker -v
