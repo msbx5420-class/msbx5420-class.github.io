@@ -35,7 +35,7 @@ docker run -p 8888:8888 jupyter/base-notebook
 #unzip ex1_week1.zip file so two files are under ex1_week1 folder
 #check container id
 docker ps
-#[IMPORTANT] everytime you see {...}, it is specific to your local computer, so you need to change {...} to your own path, folder name, or container id
+#[IMPORTANT] everytime you see {...}, it is specific to your local computer, so you need to change the whole {...} (including {}) to your own path, folder name, or container id
 #[IMPORTANT] paths in Windows typically look like C:\Users\{username}\... paths in MacOS or Linux typically look like /Users/{username}/... you can copy path from file explorer or finder, or drag file into the terminal window to obtain the file path
 docker cp {your_local_path}/ex1_week1/word_count_python.ipynb {docker_container_id}:/home/jovyan/word_count_python.ipynb
 docker cp {your_local_path}/ex1_week1/big_data_intro.txt {docker_container_id}:/home/jovyan/big_data_intro.txt
