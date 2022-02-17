@@ -6,18 +6,18 @@ The objective of this group project is to use what we learned in this course to 
 
 ### Basic Requirements
 
-* Dataset: You can use any dataset in the project. However, your data should have substantial size. Datasets below 10MB are not allowed. Some suggested datasets are provided; you can use your own data if you would like.
+* Dataset: You can use any dataset in the project. However, your data should have substantial size. This is a big data course so datasets below 10MB are not allowed. Some suggested datasets are provided; you can use or collect your own data if you would like.
 * Environment: You can use Docker or MyBinder to test your code. In the end, you are required to use AWS EMR cluster to run your analysis.
-* Programming Language: You can use any type of programming or analytics tools, but must include the use of Spark with Python (PySpark)
+* Programming Language: You can use any type of programming languages or analytics tools, but must include the use of Spark with Python (PySpark), which needs to be deployed on the cluster; that is, if you need to implement specific feature but it is not available in Spark, you have the flexibility to justify it and use other tools, but still make sure you have something implemented by PySpark in that case.
 
 ### Functional Requirements
 
-* Data Ingestion: Save your dataset into HDFS or Amazon S3. Then read data from HDFS or S3 to do analysis.
-* Basic statistics and analysis of the ingested dataset and display your insights (use Jupyter notebook or other type of visualization)
+* Data Ingestion: Save your dataset into HDFS or AWS S3. Then read data from HDFS or S3 to do analysis. Typically S3 is more convenient in this project because the data in S3 can be shared across clusters.
+* Basic statistics and analysis of the ingested dataset (with PySpark or other packages if necessary) and display your insights (use Jupyter notebook or other type of visualization).
 
 ### Performance Requirements
 
-* You can test your application or analysis on your laptop with Docker or on MyBinder; you are suggested to make sure your code work on Docker first then run it on the cluster.
+* You can test your application or analysis on your laptop with Docker or on MyBinder; you are suggested to make sure your code work on Docker or MyBinder first then run it on the cluster.
 * With your application deployed on the cluster, your implementation should show horizontal scale (i.e., when adding more nodes the cluster, the processing should be faster) and take advantage of distributed computing.
 
 ## Project Timeline and Deliverable
