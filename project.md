@@ -1,6 +1,6 @@
 # MSBX 5420 Group Project
 
-The objective of this group project is to use what we learned in this course to solve some interesting and important problems. I will encourage you to define what is interesting and important from your business perspective. Team members may have different expertise: if you are strong with business - try to contribute from a business perspective, if you are strong in coding - try to contribute to coding. Teams are self-formed with 4-5 members. Anyone without a team will be randomly assigned into teams. Team information will be finalized by the end of March 8).
+The objective of this group project is to use what we learned in this course to solve some interesting and important problems. I will encourage you to define what is interesting and important from your business perspective. Team members may have different expertise: if you are strong with business - try to contribute from a business perspective, if you are strong in coding - try to contribute to coding. Teams are self-formed with 4-5 members. Anyone without a team will be randomly assigned into teams. Team information will be finalized by the end of March 13).
 
 ## Project Requirements
 
@@ -77,7 +77,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Please follow the rules to use cluster and create directories. Try not to use the directories under user directory `~` when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under user directory will be migrated to `/mnt1/msbx5420_teams`.
 
-* Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR21.pem` inside your current directory)
+* Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR22.pem` inside your current directory)
 
   ```bash
   ssh -i MSBX5420-SPR21.pem hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
@@ -103,7 +103,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Use ssh port forwarding to connect to JupyterHub (or add `-f` to have persistent connection)
 
   ```bash
-  ssh -i MSBX5420-SPR21.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
   ```
 
 * Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>
