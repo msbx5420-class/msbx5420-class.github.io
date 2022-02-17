@@ -67,9 +67,9 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Leeds AWS EMR Cluster: Leeds Technology Service will create a series of AWS clusters for the project. 
 
-* Host address is *ec2-34-216-218-24.us-west-2.compute.amazonaws.com*
+* Host address is *ec2-34-216-218-24.us-west-2.compute.amazonaws.com* (to be updated)
 
-* Private key files are same with the first cluster - `MSBX5420-SPR21.pem` and `MSBX5420-SPR21.ppk`
+* Private key files are same with the first cluster - `MSBX5420-SPR22.pem` and `MSBX5420-SPR22.ppk`
 
 * Create your team directory under absolute path `/mnt1/msbx5420_teams` first and then copy your files to your team directory with `scp`
 
@@ -84,21 +84,19 @@ You can use any dataset you want for this project. In case you have troubles in 
   scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
   ```
 
-* You can also use Putty or FileZilla to connect cluster, forward port and transfer files (with `MSBX5420-SPR21.ppk`)
+* You can also use Putty or FileZilla to connect cluster, forward port and transfer files (with `MSBX5420-SPR22.ppk`)
 
 > If the main cluster is crowded and hard to get access, you can use a smaller backup cluster below; but still, make sure your code has been tested locally with anaconda or docker first.
 
-* The backup cluster host address is *ec2-54-188-122-165.us-west-2.compute.amazonaws.com*
-
-* Commands to access cluster, upload files and connect JupyterHub
+* Commands to access cluster, upload files and connect JupyterHub (to be updated)
 
   ```
-  ssh -i MSBX5420-SPR21.pem hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
-  ssh -i MSBX5420-SPR21.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR22.pem hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR22.pem your_file hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
   ```
 
-* The backup cluster shares the same AWS S3 bucket with main cluster; the procedure of using HDFS is same with main cluster. If you read data from HDFS, you can upload data to cluster and put into HDFS in the same way; if you read data from S3, you don't need to do additional steps
+* All clusters share the same AWS S3 bucket; if you read data from S3, you don't need to do additional steps
 
 ### Use Jupyter Notebook on Cluster
 
