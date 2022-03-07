@@ -77,7 +77,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Please follow the rules to use cluster and create directories. Try not to use the directories under user directory `~` when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under user directory will be migrated to `/mnt1/msbx5420_teams`.
 
-* Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR22.pem` inside your current directory)
+* (To be updated) Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR22.pem` inside your current directory)
 
   ```bash
   ssh -i MSBX5420-SPR21.pem hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
@@ -88,7 +88,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 > If the main cluster is crowded and hard to get access, you can use a smaller backup cluster below; but still, make sure your code has been tested locally with anaconda or docker first.
 
-* Commands to access cluster, upload files and connect JupyterHub (to be updated)
+* (To be updated) Commands to access cluster, upload files and connect JupyterHub
 
   ```
   ssh -i MSBX5420-SPR22.pem hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
@@ -100,10 +100,10 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Use Jupyter Notebook on Cluster
 
-* Use ssh port forwarding to connect to JupyterHub (or add `-f` to have persistent connection)
+* (To be updated) Use ssh port forwarding to connect to JupyterHub (or add `-f` to have persistent connection)
 
   ```bash
-  ssh -i MSBX5420-SPR22.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
   ```
 
 * Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>
@@ -113,7 +113,7 @@ You can use any dataset you want for this project. In case you have troubles in 
   sudo docker exec jupyterhub bash -c "echo username:password | chpasswd"
   ```
 
-* Go to `https://localhost:8080` in browser and login with your team username and password; then create or upload your notebooks.
+* Go to `https://localhost:8890` in browser and login with your team username and password; then create or upload your notebooks.
 
 * When you see security warning, click "Advanced" or "Details" to continue and bypass it. If you are using MacOS Catalina with Chrome, blindly type `thisisunsafe` in the page and press `enter` to bypass it.
 
