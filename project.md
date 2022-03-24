@@ -25,7 +25,7 @@ The objective of this group project is to use what we learned in this course to 
 > For all project deliverables, they should be submitted on Canvas by one of the team members
 
 * ***<u>Project Proposal (Due before Week 13 Consultations):</u>*** You will need to develop a <u>one-page proposal</u> of your project, to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. Submit your project proposal <u>two days before your consultation slot</u>. Note that the proposal is only a summary of your plan and progress, your actual progress doesn't have to be constrained by it. 
-* ***<u>Project Consultation (Week 13 Apr 4-10):</u>*** Your team will make an appointment (30 mins) with instructor by choosing your time slots (which will be confirmed in Week 11). You will discuss your project with instructor, demonstrate your preliminary works, and get feedback on solving the problems. It is recommended that all team members join the consultation to demonstrate you are working as a whole team.
+* ***<u>Project Consultation (Week 13 Apr 4-10):</u>*** Your team will make an appointment (30 mins) with instructor by choosing your time slots (which will be confirmed in Week 12). You will discuss your project with instructor, demonstrate your preliminary works, and get feedback on solving the problems. It is recommended that all team members join the consultation to demonstrate you are working as a whole team.
 * ***<u>Project Presentation (Week 15 Apr 18/20):</u>*** You will present your problem and analysis (insights) in the class. Your presentation date (April 20 or 22) will be determined by the section of the majority of team members. You are required to do in-person presentation, if possible; only if you have special constraints or you are distance education students, you can do pre-recorded videos for presentation. Submit your presentation slides (and pre-recorded videos, if applicable) on the same day of your presentation. The order of presentation will be decided by lucky draw.
 * ***<u>Project Implementation (Due April 28):</u>*** You will refine your project after presentation and submit your final application (code, data, etc.) in the project as the deliverable of implementation.
 * ***<u>Project Report (Due April 28):</u>*** Based on your problems and insights, you will write a project report to motivate your problem, describe the dataset you use, present your findings and discuss the implications of your findings.
@@ -63,7 +63,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Connect to AWS EMR Cluster
 
-> The AWS EMR cluster for project is available from March 28 to April 30
+> The AWS EMR cluster for project is available from March 30 to April 30
 
 * Leeds AWS EMR Cluster: Leeds Technology Service will create a series of AWS clusters for the project. 
 
@@ -80,6 +80,13 @@ You can use any dataset you want for this project. In case you have troubles in 
 * (To be updated) Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR22.pem` inside your current directory)
 
   ```bash
+  #cluster 1
+  ssh -i MSBX5420-SPR21.pem hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  #cluster 2
+  ssh -i MSBX5420-SPR21.pem hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  #cluster 3
   ssh -i MSBX5420-SPR21.pem hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
   scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
   ```
@@ -90,10 +97,19 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * (To be updated) Commands to access cluster, upload files and connect JupyterHub
 
-  ```
+  ```bash
+  #cluster 1
   ssh -i MSBX5420-SPR22.pem hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
   scp -i MSBX5420-SPR22.pem your_file hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
-  ssh -i MSBX5420-SPR22.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
+  #cluster 2
+  ssh -i MSBX5420-SPR22.pem hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR22.pem your_file hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
+  #cluster 3
+  ssh -i MSBX5420-SPR22.pem hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR22.pem your_file hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
   ```
 
 * All clusters share the same AWS S3 bucket; if you read data from S3, you don't need to do additional steps
@@ -103,10 +119,15 @@ You can use any dataset you want for this project. In case you have troubles in 
 * (To be updated) Use ssh port forwarding to connect to JupyterHub (or add `-f` to have persistent connection)
 
   ```bash
+  #cluster 1
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
+  #cluster 2
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
+  #cluster 3
   ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
   ```
 
-* Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>
+* Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>. *If you use multiple clusters for JupyterHub, please make sure you have the same username across the clusters.* This will make all your users in different clusters share the notebooks.
 
   ```bash
   sudo docker exec jupyterhub useradd -m -s /bin/bash -N username

@@ -4,7 +4,7 @@
 
 ```bash
 docker pull redis
-docker run --name my_redis -d redis
+docker run --name my_redis -p  -d redis
 docker exec -it my_redis bash
 
 #get into redis shell
@@ -102,7 +102,7 @@ exit
 docker network create --driver=bridge nosql-net
 
 #change the path to your own
-docker run --net=nosql-net -p 8088:8888 -v /mnt/c/Users/zhiyiwang/Dropbox/CU/Teaching/MSBX5420/exercises:/home/jovyan/exercises jupyter/pyspark-notebook
+docker run --net=nosql-net -p 8889:8888 -v /mnt/c/Users/zhiyiwang/Dropbox/CU/Teaching/MSBX5420/exercises:/home/jovyan/exercises jupyter/pyspark-notebook
 
 #in another terminal
 docker run -d --net=nosql-net --name my_mongo --hostname my-mongodb mongo
