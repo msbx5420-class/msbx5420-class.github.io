@@ -127,7 +127,7 @@ You can use any dataset you want for this project. In case you have troubles in 
   ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
   ```
 
-* Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>. *If you use multiple clusters for JupyterHub, please make sure you have the same username across the clusters.* This will make all your users in different clusters share the notebooks.
+* Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>. *<u>If you use multiple clusters for JupyterHub, please make sure you have the same username across the clusters.</u>* This will make all your users in different clusters share the notebooks.
 
   ```bash
   sudo docker exec jupyterhub useradd -m -s /bin/bash -N username
@@ -153,7 +153,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Use AWS S3 Bucket on Cluster
 
-* Our S3 bucket on cluster is `s3://msbx5420-spr21`
+* Our S3 bucket on cluster is `s3://msbx5420-spr22`
 
 * HDFS storage is limited in the cluster, so if HDFS is not available, upload your file to S3 bucket, which is similar
 
