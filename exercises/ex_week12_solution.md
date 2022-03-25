@@ -99,14 +99,16 @@ exit
 ## NoSQL - ElasticSearch + Kibana
 
 ```bash
-docker network create nosql
+docker network create elastic
 docker pull elasticsearch:8.1.0
-docker run --name elasticsearch --net nosql -p 9200:9200 -p 9300:9300  -e "discovery.type=single-node" -e ES_JAVA_OPTS="-Xms512m -Xmx512m" docker.elastic.co/elasticsearch/elasticsearch:8.1.0
+docker run --name elasticsearch --net elastic -p 9200:9200 -p 9300:9300  -e "discovery.type=single-node" -e ES_JAVA_OPTS="-Xms512m -Xmx512m" docker.elastic.co/elasticsearch/elasticsearch:8.1.0
+
+#open another terminal
 docker pull kibana:8.1.0
-docker run --name kibana --net nosql -p 8601:5601 docker.elastic.co/kibana/kibana:8.1.0
+docker run --name kibana --net elastic -p 8601:5601 docker.elastic.co/kibana/kibana:8.1.0
 
 docker exec -it elasticsearch bash
-elasticsearch-reset-password interactive - kibana_system
+elasticsearch-reset-password interactive -u kibana_system
 elasticsearch-reset-password interactive -u elastic
 ```
 
@@ -116,10 +118,10 @@ elasticsearch-reset-password interactive -u elastic
 docker network create --driver=bridge nosql-net
 
 #change the path to your own
-docker run --net=nosql-net -p 8889:8888 -v /mnt/c/Users/zhiyiwang/Dropbox/CU/Teaching/MSBX5420/exercises:/home/jovyan/exercises jupyter/pyspark-notebook
+docker run --net nosql-net -p 8889:8888 -v C:/Users/zhiyiwang/Dropbox/CU/Teaching/MSBX5420/exercises:/home/jovyan/exercises jupyter/pyspark-notebook
 
 #in another terminal
-docker run -d --net=nosql-net --name my_mongo --hostname my-mongodb mongo
+docker run --net nosql-net --name my_mongo --hostname my-mongodb -p 27017:27017 -d mongo
 docker exec -it my_mongo bash
 apt-get update
 apt-get install wget
