@@ -121,9 +121,4 @@ docker run --net nosql-net -p 8889:8888 -v C:/Users/zhiyiwang/Dropbox/CU/Teachin
 
 #in another terminal
 docker run --net nosql-net --name my_mongo --hostname my-mongodb -p 27017:27017 -d mongo
-docker exec -it my_mongo bash
-apt-get update
-apt-get install wget
-wget https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/inventory.crud.json
-mongoimport --db my_test --collection inventory --drop --file inventory.crud.json
 ```
