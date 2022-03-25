@@ -96,6 +96,20 @@ db.mycollection_1.find({'likes': {$gt:50}, $or: [{'by': 'zhiyiwang'},{'title': '
 exit
 ```
 
+## NoSQL - ElasticSearch + Kibana
+
+```bash
+docker network create nosql
+docker pull elasticsearch:8.1.0
+docker run --name elasticsearch --net nosql -p 9200:9200 -p 9300:9300  -e "discovery.type=single-node" -e ES_JAVA_OPTS="-Xms512m -Xmx512m" docker.elastic.co/elasticsearch/elasticsearch:8.1.0
+docker pull kibana:8.1.0
+docker run --name kibana --net nosql -p 8601:5601 docker.elastic.co/kibana/kibana:8.1.0
+
+docker exec -it elasticsearch bash
+elasticsearch-reset-password interactive - kibana_system
+elasticsearch-reset-password interactive -u elastic
+```
+
 ## Spark with NoSQL (MongoDB)
 
 ```bash
