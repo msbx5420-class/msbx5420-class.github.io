@@ -4,7 +4,7 @@
 
 ```bash
 docker pull redis
-docker run --name my_redis -p  -d redis
+docker run --name my_redis -p 8379:6379 -d redis
 docker exec -it my_redis bash
 
 #get into redis shell
@@ -42,13 +42,12 @@ SREM myset "!"
 HSET myhash field_1 "value 1"
 HSET myhash field_2 "value 2"
 HGETALL myhash
-HGET myhash field1
+HGET myhash field_1
 
 HSET user.3.movies movie_id 3 title "Avengers" genre "Action" year 2012
-HGETALL user.3.movies 
+HGETALL user.3.movies
 HGET user.3.movies title
 
-#select 2
 exit
 ```
 
@@ -56,7 +55,7 @@ exit
 
 ```bash
 docker pull mongo
-docker run --name my_mongo -d mongo
+docker run --name my_mongo -p 27017:27017 -d mongo
 docker exec -it my_mongo bash
 
 #get into mongodb shell
