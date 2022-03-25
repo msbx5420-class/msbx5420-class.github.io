@@ -111,11 +111,11 @@ You can use any dataset you want for this project. In case you have troubles in 
   #cluster 2
   ssh -i MSBX5420-SPR22.pem hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
   scp -i MSBX5420-SPR22.pem your_file hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
-  ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8891:localhost:9443 hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
   #cluster 3
   ssh -i MSBX5420-SPR22.pem hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
   scp -i MSBX5420-SPR22.pem your_file hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
-  ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8892:localhost:9443 hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
   ```
 
 * All clusters share the same AWS S3 bucket; if you read data from S3, you don't need to do additional steps
@@ -128,9 +128,9 @@ You can use any dataset you want for this project. In case you have troubles in 
   #cluster 1
   ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
   #cluster 2
-  ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8891:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
   #cluster 3
-  ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8892:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
   ```
 
 * Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>. *<u>If you use multiple clusters for JupyterHub, please make sure you have the same username across the clusters.</u>* This will make all your users in different clusters share the notebooks.
@@ -140,7 +140,7 @@ You can use any dataset you want for this project. In case you have troubles in 
   sudo docker exec jupyterhub bash -c "echo username:password | chpasswd"
   ```
 
-* Go to `https://localhost:8890` in browser and login with your team username and password; then create or upload your notebooks.
+* Go to `https://localhost:8890` (cluster 1), or `https://localhost:8891` (cluster 2), `https://localhost:8892` (cluster 3) in browser and login with your team username and password; then create or upload your notebooks.
 
 * When you see security warning, click "Advanced" or "Details" to continue and bypass it. If you are using MacOS Catalina with Chrome, blindly type `thisisunsafe` in the page and press `enter` to bypass it.
 
@@ -152,6 +152,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ###  Use HDFS on Cluster
 
+* You are recommended to use AWS S3 in case you need to switch cluster, but HDFS is still a valid option
 * Create your team directory in HDFS under `/msbx5420_teams/team_directory`
 * Copy files in `/mnt1/msbx5420_teams/team_directory` from master node of cluster to HDFS under `/msbx5420_teams/team_directory`
 * Save or read data in spark application with HDFS path `/msbx5420_teams/team_directory/file.name`
