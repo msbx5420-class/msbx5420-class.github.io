@@ -67,15 +67,21 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Leeds AWS EMR Cluster: Leeds Technology Service will create a series of AWS clusters for the project. 
 
-* Host address is *ec2-34-216-218-24.us-west-2.compute.amazonaws.com* (to be updated)
+* Host addresses are:
+
+  * cluster 1: *ec2-34-216-218-24.us-west-2.compute.amazonaws.com* (to be updated)
+
+  * cluster 2: *ec2-34-216-218-24.us-west-2.compute.amazonaws.com* (to be updated)
+
+  * cluster 3: *ec2-34-216-218-24.us-west-2.compute.amazonaws.com* (to be updated)
 
 * Private key files are same with the first cluster - `MSBX5420-SPR22.pem` and `MSBX5420-SPR22.ppk`
 
-* Create your team directory under absolute path `/mnt1/msbx5420_teams` first and then copy your files to your team directory with `scp`
+* For any cluster, create your team directory under absolute path `/mnt1/msbx5420_teams` first and then copy your files to your team directory with `scp`
 
-* All personal directories are under `/mnt1/msbx5420` and all team directories are under `/mnt1/msbx5420_teams`
+* All personal directories (if needed) are under `/mnt1/msbx5420` and all team directories are under `/mnt1/msbx5420_teams`
 
-* Please follow the rules to use cluster and create directories. Try not to use the directories under user directory `~` when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under user directory will be migrated to `/mnt1/msbx5420_teams`.
+* Please follow the rules to use cluster and create directories. Do not to use the directories under entry directory when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under entry directory will be migrated to `/mnt1/msbx5420_teams`.
 
 * (To be updated) Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR22.pem` inside your current directory)
 
