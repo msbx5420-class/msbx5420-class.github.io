@@ -116,9 +116,8 @@ elasticsearch-reset-password interactive -u elastic
 ```bash
 docker network create --driver=bridge nosql-net
 
+docker run --net nosql-net --name my_mongo --hostname my-mongodb -p 27017:27017 -d mongo
+
 #change the path to your own
 docker run --net nosql-net -p 8889:8888 -v C:/Users/zhiyiwang/Dropbox/CU/Teaching/MSBX5420/exercises:/home/jovyan/exercises jupyter/pyspark-notebook
-
-#in another terminal
-docker run --net nosql-net --name my_mongo --hostname my-mongodb -p 27017:27017 -d mongo
 ```
