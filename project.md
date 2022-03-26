@@ -24,8 +24,8 @@ The objective of this group project is to use what we learned in this course to 
 
 > For all project deliverables, they should be submitted on Canvas by one of the team members
 
-* ***<u>Project Proposal (Due before Week 13 Consultations):</u>*** You will need to develop a <u>one-page proposal</u> of your project, to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. Submit your project proposal <u>two days before your consultation slot</u>. Note that the proposal is only a summary of your plan and progress, your actual progress doesn't have to be constrained by it. 
-* ***<u>Project Consultation (Week 13 Apr 4-10):</u>*** Your team will make an appointment (30 mins) with instructor by choosing your time slots (which will be confirmed in Week 12). You will discuss your project with instructor, demonstrate your preliminary works, and get feedback on solving the problems. It is recommended that all team members join the consultation to demonstrate you are working as a whole team.
+* ***<u>Project Proposal (Due before Week 13 Consultations):</u>*** You will need to develop a <u>one-page proposal</u> of your project (the second page will not be graded), to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. Submit your project proposal <u>two days before your consultation slot</u>. Note that the proposal is only a summary of your plan and progress, your actual progress doesn't have to be constrained by it. 
+* ***<u>Project Consultation (Week 13 Apr 4-10):</u>*** Your team will make an appointment (30 mins) with instructor by choosing your time slots (which will be confirmed in Week 12). You will discuss your project with instructor, demonstrate your preliminary works, and get feedback on solving the problems. It is recommended that all team members join the consultation to demonstrate you are working as a whole team. No-show in consultation without reasons will affect participation grade.
 * ***<u>Project Presentation (Week 15 Apr 18/20):</u>*** You will present your problem and analysis (insights) in the class. Your presentation date (April 20 or 22) will be determined by the section of the majority of team members. You are required to do in-person presentation, if possible; only if you have special constraints or you are distance education students, you can do pre-recorded videos for presentation. Submit your presentation slides (and pre-recorded videos, if applicable) on the same day of your presentation. The order of presentation will be decided by lucky draw.
 * ***<u>Project Implementation (Due April 28):</u>*** You will refine your project after presentation and submit your final application (code, data, etc.) in the project as the deliverable of implementation.
 * ***<u>Project Report (Due April 28):</u>*** Based on your problems and insights, you will write a project report to motivate your problem, describe the dataset you use, present your findings and discuss the implications of your findings.
@@ -37,7 +37,7 @@ The objective of this group project is to use what we learned in this course to 
 * ***<u>Project Proposal (4%):</u>*** Please be concise on your proposal within one-page. <u>Contents exceeding one-page will not be graded.</u>
 * ***<u>Project Presentation (8%):</u>*** Presentation will be 13-16 (to be updated based on total groups) mins for each group. Make sure your presentation length fall into the range. For either in-person or pre-recorded presentation, make sure all of your team members have engagement in the presentation.
 * ***<u>Project Implementation (12%):</u>*** Your implementation (analysis and code) will take 8%, while the deployment of your application (pyspark implementation) on the cluster will take 4%.
-* ***<u>Project Report (16%):</u>*** Your final report should include the following components: 
+* ***<u>Project Report (16%):</u>*** The final report has no page limits (typically 10-15 pages would be sufficient). Your final report should include the following components: 
   * Abstract / summary of your report
   * The background and motivation of your questions
   * The dataset and analysis methods
@@ -67,7 +67,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Leeds AWS EMR Cluster: Leeds Technology Service will create a series of AWS clusters for the project. 
 
-* Host addresses are:
+* (To be updated) Host addresses are:
 
   * cluster 1: *ec2-34-216-218-24.us-west-2.compute.amazonaws.com* (to be updated)
 
@@ -122,7 +122,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Use Jupyter Notebook on Cluster
 
-* (To be updated) Use ssh port forwarding to connect to JupyterHub (or add `-f` to have persistent connection)
+* (To be updated) Use ssh port forwarding to connect to JupyterHub (or add `-f` to have persistent connection in the backend)
 
   ```bash
   #cluster 1
@@ -140,7 +140,7 @@ You can use any dataset you want for this project. In case you have troubles in 
   sudo docker exec jupyterhub bash -c "echo username:password | chpasswd"
   ```
 
-* Go to `https://localhost:8890` (cluster 1), or `https://localhost:8891` (cluster 2), `https://localhost:8892` (cluster 3) in browser and login with your team username and password; then create or upload your notebooks.
+* Go to `https://localhost:8890` (cluster 1), or `https://localhost:8891` (cluster 2), or `https://localhost:8892` (cluster 3) in browser and login with your team username and password; then create or upload your notebooks.
 
 * When you see security warning, click "Advanced" or "Details" to continue and bypass it. If you are using MacOS Catalina with Chrome, blindly type `thisisunsafe` in the page and press `enter` to bypass it.
 
@@ -148,7 +148,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * In the notebook, make sure you specify `spark://spark-master:7077` or `yarn` in `master()` rather than using `local`
 
-* Please avoid uploading files in JupyterHub. The files you read from JupyterHub cannot be run by PySpark and running analysis directly from the file will easily overload the master node.
+* Please avoid uploading data files in JupyterHub. The data files you upload to JupyterHub workspace cannot be loaded by PySpark kernel and running analysis directly from the data file in the workspace will easily overload the master node.
 
 ###  Use HDFS on Cluster
 
