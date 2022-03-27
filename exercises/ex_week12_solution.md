@@ -102,12 +102,13 @@ exit
 ```bash
 docker network create elastic
 docker pull elasticsearch:8.1.0
-docker run --name elasticsearch --net elastic -p 9200:9200 -p 9300:9300  -e "discovery.type=single-node" -e ES_JAVA_OPTS="-Xms512m -Xmx512m" docker.elastic.co/elasticsearch/elasticsearch:8.1.0
+docker run --name elasticsearch --net elastic -p 9200:9200 -p 9300:9300  -e "discovery.type=single-node" -e ES_JAVA_OPTS="-Xms512m -Xmx512m" elasticsearch:8.1.0
 
 #open another terminal
 docker pull kibana:8.1.0
-docker run --name kibana --net elastic -p 8601:5601 docker.elastic.co/kibana/kibana:8.1.0
+docker run --name kibana --net elastic -p 8601:5601 kibana:8.1.0
 
+#open another terminal
 docker exec -it elasticsearch bash
 elasticsearch-reset-password interactive -u kibana_system
 elasticsearch-reset-password interactive -u elastic
