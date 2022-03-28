@@ -94,7 +94,7 @@ db.mycollection_1.find({'likes': {$gt:50}, $or: [{'by': 'zhiyiwang'},{'title': '
 
 exit
 
-#delete this mongodb container in docker desktop
+#remove this mongodb container in docker desktop
 ```
 
 ## NoSQL - ElasticSearch + Kibana
