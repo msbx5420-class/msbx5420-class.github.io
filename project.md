@@ -83,39 +83,39 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Please follow the rules to use cluster and create directories. Do not to use the directories under entry directory when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under entry directory will be migrated to `/mnt1/msbx5420_teams`.
 
-* (To be updated) Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR22.pem` inside your current directory)
+* Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR22.pem` inside your current directory)
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420-SPR21.pem hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR21.pem hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
   #cluster 2
-  ssh -i MSBX5420-SPR21.pem hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR21.pem hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
   #cluster 3
-  ssh -i MSBX5420-SPR21.pem hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR21.pem hadoop@ec2-52-39-35-5.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-52-39-35-5.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
   ```
 
 * You can also use Putty or FileZilla to connect cluster, forward port and transfer files (with `MSBX5420-SPR22.ppk`)
 
 > If the main cluster is crowded and hard to get access, you can use a smaller backup cluster below; but still, make sure your code has been tested locally with anaconda or docker first.
 
-* (To be updated) Commands to access cluster, upload files and connect JupyterHub
+* Commands to access cluster, upload files and connect JupyterHub
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420-SPR22.pem hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR22.pem your_file hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
-  ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR22.pem hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR22.pem your_file hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com
   #cluster 2
-  ssh -i MSBX5420-SPR22.pem hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR22.pem your_file hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
-  ssh -i MSBX5420-SPR22.pem -N -L localhost:8891:localhost:9443 hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR22.pem hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR22.pem your_file hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8891:localhost:9443 hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com
   #cluster 3
-  ssh -i MSBX5420-SPR22.pem hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR22.pem your_file hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
-  ssh -i MSBX5420-SPR22.pem -N -L localhost:8892:localhost:9443 hadoop@ec2-54-188-122-165.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR22.pem hadoop@ec2-52-39-35-5.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR22.pem your_file hadoop@ec2-52-39-35-5.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8892:localhost:9443 hadoop@ec2-52-39-35-5.us-west-2.compute.amazonaws.com
   ```
 
 * All clusters share the same AWS S3 bucket; if you read data from S3, you don't need to do additional steps
@@ -126,11 +126,11 @@ You can use any dataset you want for this project. In case you have troubles in 
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8890:localhost:9443 hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com
   #cluster 2
-  ssh -i MSBX5420-SPR22.pem -N -L localhost:8891:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8891:localhost:9443 hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com
   #cluster 3
-  ssh -i MSBX5420-SPR22.pem -N -L localhost:8892:localhost:9443 hadoop@ec2-34-216-218-24.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR22.pem -N -L localhost:8892:localhost:9443 hadoop@ec2-52-39-35-5.us-west-2.compute.amazonaws.com
   ```
 
 * Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>. *<u>If you use multiple clusters for JupyterHub, please make sure you have the same username across the clusters.</u>* This will make all your users in different clusters share the notebooks.
