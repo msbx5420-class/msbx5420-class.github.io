@@ -63,7 +63,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Connect to AWS EMR Cluster
 
-> The AWS EMR cluster for project is available from March 30 to April 30
+> The AWS EMR clusters for project are available from March 30 to April 30
 
 * Leeds AWS EMR Cluster: Leeds Technology Service has created a series of AWS clusters for the project. 
 
