@@ -69,11 +69,11 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Host addresses are:
 
-  * cluster 1: *ec2-34-216-218-24.us-west-2.compute.amazonaws.com* (to be updated)
+  * cluster 1: *ec2-34-220-138-138.us-west-2.compute.amazonaws.com*
 
-  * cluster 2: *ec2-34-216-218-24.us-west-2.compute.amazonaws.com* (to be updated)
+  * cluster 2: *ec2-52-11-151-94.us-west-2.compute.amazonaws.com*
 
-  * cluster 3: *ec2-34-216-218-24.us-west-2.compute.amazonaws.com* (to be updated)
+  * cluster 3: *ec2-52-39-35-5.us-west-2.compute.amazonaws.com*
 
 * Private key files are same with the first cluster - `MSBX5420-SPR22.pem` and `MSBX5420-SPR22.ppk`
 
