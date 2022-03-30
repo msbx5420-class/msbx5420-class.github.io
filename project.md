@@ -144,7 +144,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * When you see security warning, click "Advanced" or "Details" to continue and bypass it. If you are using MacOS Catalina with Chrome, blindly type `thisisunsafe` in the page and press `enter` to bypass it.
 
-* To run PySpark program, use the kernel `PySaprk` for notebook. If you need additional python packages, let the instructor know as early as possible.
+* To run PySpark program, use the kernel `PySaprk` for notebook. If you need additional python packages, let the instructor know as early as possible. **Please do not install packages yourself**.
 
 * In the notebook, make sure you specify `spark://spark-master:7077` or `yarn` in `master()` rather than using `local`
 
