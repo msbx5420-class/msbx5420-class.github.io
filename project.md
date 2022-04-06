@@ -87,14 +87,14 @@ You can use any dataset you want for this project. In case you have troubles in 
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420-SPR21.pem hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR22.pem hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR22.pem your_file hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
   #cluster 2
-  ssh -i MSBX5420-SPR21.pem hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR22.pem hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR22.pem your_file hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
   #cluster 3
-  ssh -i MSBX5420-SPR21.pem hadoop@ec2-52-39-35-5.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR21.pem your_file hadoop@ec2-52-39-35-5.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR22.pem hadoop@ec2-52-39-35-5.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR22.pem your_file hadoop@ec2-52-39-35-5.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
   ```
 
 * You can also use Putty or FileZilla to connect cluster, forward port and transfer files (with `MSBX5420-SPR22.ppk`)
