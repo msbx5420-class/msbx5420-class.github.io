@@ -51,7 +51,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 * COVID-19 related data ([https://www.kaggle.com/datasets?topic=covidDataset](https://www.kaggle.com/datasets?topic=covidDataset))
 * AWS opendata ([https://registry.opendata.aws/](https://registry.opendata.aws/))
 * Amazon review data ([http://jmcauley.ucsd.edu/data/amazon/](http://jmcauley.ucsd.edu/data/amazon/))
-* Airbnb data ([http://insideairbnb.com/get-the-data.html](http://insideairbnb.com/get-the-data.html))
+* Airbnb data ([http://insideairbnb.com/get-the-data](http://insideairbnb.com/get-the-data))
 * Bike share data ([https://www.citibikenyc.com/system-data](https://www.citibikenyc.com/system-data) or [https://www.lyft.com/bikes/bay-wheels/system-data](https://www.lyft.com/bikes/bay-wheels/system-data))
 * GitHub data ([https://www.githubarchive.org/](https://www.githubarchive.org/) or [https://ghtorrent.org/](https://ghtorrent.org/))
 * Bitcoin data ([https://www.kaggle.com/bigquery/bitcoin-blockchain](https://www.kaggle.com/bigquery/bitcoin-blockchain))
