@@ -56,7 +56,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 * GitHub data ([https://www.githubarchive.org/](https://www.githubarchive.org/) or [https://ghtorrent.org/](https://ghtorrent.org/))
 * Bitcoin data ([https://www.kaggle.com/bigquery/bitcoin-blockchain](https://www.kaggle.com/bigquery/bitcoin-blockchain))
 * Lending data ([https://www.kaggle.com/wordsforthewise/lending-club](https://www.kaggle.com/wordsforthewise/lending-club) or [https://www.kiva.org/build/data-snapshots](https://www.kiva.org/build/data-snapshots))
-* Sports data ([https://www.kaggle.com/hugomathien/soccer](https://www.kaggle.com/hugomathien/soccer))
+* Sports data ([https://www.kaggle.com/datasets/hugomathien/soccer](https://www.kaggle.com/datasets/hugomathien/soccer))
 * E-Sports data ([https://www.kaggle.com/devinanzelmo/dota-2-matches](https://www.kaggle.com/devinanzelmo/dota-2-matches) or [https://www.kaggle.com/skihikingkevin/pubg-match-deaths](https://www.kaggle.com/skihikingkevin/pubg-match-deaths))
 
 ## Cluster Environment Notes
