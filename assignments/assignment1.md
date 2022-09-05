@@ -123,7 +123,7 @@ Do not forget to stop your container after finishing the tasks. You can use ```d
 
 
 
-## Task 3 - HDFS with Hadoop Cluster
+## Task 3 - Practice HDFS with Hadoop Cluster
 
 Last, what we have done is based on a pseudo distributed environment with single namenode/datanote on one machine. Next let's try to work with a cluster to see what's happening with a hadoop cluster. The commands below will let you start a hadoop cluster on your local machine. So first make sure you can start the docker container based cluster with the following commands. The cluster contains one namenode and two datanodes.
 
