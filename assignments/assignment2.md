@@ -69,5 +69,5 @@ You will need to submit the *jupyter notebook assignment2.ipynb with your comple
 ### Rules
 
 1. Work on the assignment independently
-2. If you have questions about the assignment, ask as early as possible
+2. If you have any questions about the assignment, ask as early as possible
 3. Late submission will receive 1 point deduction (total 10 points) per day
