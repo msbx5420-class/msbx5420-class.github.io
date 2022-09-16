@@ -2,7 +2,7 @@
 
 In this assignment, you are required to work on two tasks - (1) a warm-up task that lets you re-work on the two MapReduce calculations in assignment 1, but with spark RDD, dataframe and SQL; (2) solve data analytics problems with spark dataframe or spark SQL. All the existing code and your code will be in the assignment2.ipynb jupyter notebook. Below are the descriptions of each task and hints for solving the problems.
 
-## Task 1 - Warm Up with Spark
+## Task 1 - Warm Up with Spark Basic Operations
 
 Let's first do a warm-up with spark to review the ways of using spark RDD, spark dataframe, and spark SQL. Recall in assignment 1, with MapReduce and NFL dataset, we did two calculations - (1) *number of plays in each football game* (2) *average yards gained per play in each game*. Now let's do them with spark.
 
@@ -69,5 +69,7 @@ You will need to submit the *jupyter notebook assignment2.ipynb with your comple
 ### Rules
 
 1. Work on the assignment independently
+
 2. If you have any questions about the assignment, ask as early as possible
+
 3. Late submission will receive 1 point deduction (total 10 points) per day
