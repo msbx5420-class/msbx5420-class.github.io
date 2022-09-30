@@ -1,6 +1,6 @@
 # MSBX 5420 Assignment 1
 
-Please read this instruction carefully to avoid potential issues! If you need to copy-paste those commands, please visit https://msbx5420-class.github.io/assignments/assignment1.html for the same online version to do that.
+Please first read this instruction carefully to avoid potential issues! If you need to copy-paste those commands, please visit https://msbx5420-class.github.io/assignments/assignment1.html for the same online version to do that.
 
 In this assignment, you are required to work on three tasks - (1) use HDFS command lines to copy and manage files, (2) run MapReduce Python code for calculating statistics in NFL data, (3) work with HDFS in a (docker simulated) hadoop cluster. Below we will go through the overall process step by step, and the specific tasks you need to do are embedded in the descriptions. Please read the descriptions carefully to make sure you can perform the tasks smoothly.
 
