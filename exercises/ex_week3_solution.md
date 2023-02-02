@@ -24,8 +24,6 @@ docker exec -it hadoop-master bash
 ./start-hadoop.sh
 ```
 
-Try to copy files into HDFS.  The pydoop container has a pseudo distributed hadoop environment.
-
 Let's tart with something simple.
 
 **Note:** in terminal window, you can use Tab (press Tab) to auto fill the file or folder names; for example, if you want to `cd test_folder`, you can type ```cd te``` then press Tab, and the system will try to help to find the files or folders starting with "te"; when there is only one matched result, the system will automatically fill the exact file or folder name. Then you don't need to type the full file or folder name. Try this to simplify the process.
