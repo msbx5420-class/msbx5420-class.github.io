@@ -12,7 +12,7 @@ In this assignment, you are required to work on three tasks - (1) use HDFS comma
 
 The first task is to use HDFS commands. This time we will use a larger dataset to better understand Hadoop Distributed File System (HDFS). 
 
-First, let's get our dataset to use. We will use a dataset for National Football League (NFL). The dataset contains play-by-play information for each NFL match from 2009 to 2018. The original dataset is from Kaggle. For this assignment, I have made some changes to the original dataset so you can download the cleaned dataset here https://www.dropbox.com/s/bi0ftamq4y7hf3q/NFL_Play_by_Play_2009-2018.csv?dl=0. You can then put all files including codes and dataset into a folder to share or mount the folder with docker container later.
+First, let's get our dataset to use. We will use a dataset for National Football League (NFL). The dataset contains play-by-play information for each NFL match from 2009 to 2018. The original dataset is from Kaggle. For this assignment, I have made some changes to the original dataset so you can download the cleaned dataset here [https://www.dropbox.com/s/bi0ftamq4y7hf3q/NFL_Play_by_Play_2009-2018.csv?dl=0](https://www.dropbox.com/s/bi0ftamq4y7hf3q/NFL_Play_by_Play_2009-2018.csv?dl=0). You can then put all files including codes and dataset into a folder to share or mount the folder with docker container later.
 
 Now we are ready to start the first task. First of all, let's follow what we did in the exercise - start the hadoop docker container and create a docker-based hadoop cluster. You can use the commands below or follow the steps in class exercise.
 
