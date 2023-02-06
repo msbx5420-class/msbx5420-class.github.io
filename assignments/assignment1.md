@@ -79,7 +79,7 @@ The process is to read each line or row (```pydoop submit``` command will do tha
 
 ### Task 2.1 Submit Python Script for MapReduce
 
-Now you need to run this python script to do MapReduce job with **<u>4 reducers</u>**. Please use the ```pydoop submit``` command with pydoop_mapreduce_nfl_sum.py to run this MapReduce job. Your output directory should be under the ```/assignment1``` directory in HDFS (e.g., `/assignment1/output`). Then use HDFS command to show the list of result files and take a screenshot of the output.
+Now you need to run this python script to do MapReduce job with **<u>4 reducers</u>**. Please use the ```pydoop submit``` command with pydoop_mapreduce_nfl_sum.py to run this MapReduce job. Your output directory should be under the ```/assignment_1``` directory in HDFS (e.g., `/assignment_1/output`). Then use HDFS command to show the list of result files and take a screenshot of the output.
 
 ### Task 2.1 Deliverables
 
