@@ -12,7 +12,7 @@ The objective of this group project is to use what we learned in this course to 
 
 ### Functional Requirements
 
-* Data Ingestion: You can read local files when developing your code locally, but when deploying your code on AWS cluster, you need to save your dataset into AWS S3. Then read data from AWS S3 to do analysis on the AWS cluster. Typically S3 is more convenient in this project because the data in S3 can be shared across clusters. It is optional, but useful you use save your data as parquet files in AWS S3 (you can save other type of data as parquet file either through Pandas or PySpark).
+* Data Ingestion: You can read local files when developing your code locally, but when deploying your code on AWS cluster, you need to save your dataset into AWS S3. Then read data from AWS S3 to do analysis on the AWS cluster. Typically S3 is more convenient in this project because the data in S3 can be shared across clusters. It is optional, but useful if you save your data as parquet files in AWS S3 (you can save other type of data as parquet file either through Pandas or PySpark).
 * Obtain statistics and perform analysis of the ingested dataset (with PySpark or other packages if necessary) and display your insights (use Jupyter notebook or other type of visualization).
 
 ### Performance Requirements
@@ -142,7 +142,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * When you see security warning, click "Advanced" or "Details" to continue and bypass it. If you are using MacOS Catalina with Chrome, blindly type `thisisunsafe` in the page and press `enter` to bypass it.
 
-* To run PySpark program, use the kernel `PySpark` for notebook. If you need additional python packages, let the instructor know as early as possible. **Please do not install packages yourself**.
+* To run PySpark program, use the kernel `PySpark` for notebook; you can use sparkmagic with `sc.install_pypi_package()` to make additional packages effective within the notebook. If you need additional python packages on the Python 3 kernel, let the instructor know as early as possible. **Please do not install packages yourself directly on the cluster**.
 
 * In the notebook, you can use sparkmagic to configure your application in terms of resource use; please follow the Wikipedia example to apply it.
 
