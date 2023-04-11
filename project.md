@@ -73,17 +73,15 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Connect to AWS EMR Cluster
 
-> The AWS EMR clusters for project are available from March April 3 to May 5
-
-* All cluster host address details will be updated in early April
+> The AWS EMR clusters for project are available from March April 10 to May 7
 
 * Leeds AWS EMR Cluster: Leeds Technology Service has supported for the creation of a series of AWS clusters for the project. 
 
 * Host addresses are (to be updated):
 
-  * cluster 1: *ec2-34-220-138-138.us-west-2.compute.amazonaws.com*
-  * cluster 2: *ec2-52-11-151-94.us-west-2.compute.amazonaws.com*
-  
+  * cluster 1: *ec2-54-188-248-34.us-west-2.compute.amazonaws.com*
+  * cluster 2: *ec2-34-220-3-240.us-west-2.compute.amazonaws.com*
+
 * Private key file is same with the first cluster - `MSBX5420-SPR23.pem` 
 
 * For any cluster, create your team directory under absolute path `/mnt1/msbx5420_teams` first and then copy your files to your team directory with `scp`
@@ -92,32 +90,19 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Please follow the rules to use cluster and create directories. Do not to use the directories under entry directory when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under entry directory will be migrated to `/mnt1/msbx5420_teams`. If you have very large data files and have troubles of uploading them to the cluster, please let the instructor know to help you upload the data.
 
-* Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR23.pem` inside your current directory)
+* Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR23.pem` inside your current directory with correct permission; `sudo chmod 600 MSBX5420-SPR23.pem` on Mac if necessary)
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420-SPR23.pem hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR23.pem your_file hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR23.pem hadoop@ec2-54-188-248-34.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR23.pem your_file hadoop@ec2-54-188-248-34.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
   #cluster 2
-  ssh -i MSBX5420-SPR23.pem hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR23.pem your_file hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR23.pem hadoop@ec2-34-220-3-240.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR23.pem your_file hadoop@ec2-34-220-3-240.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
   ```
 
-> If the main cluster is crowded and hard to get access, you can use a smaller backup cluster below; but still, make sure your code has been tested locally with anaconda or docker first.
+> If the cluster you are using is crowded and hard to get access, you can use the other cluster; but still, make sure your code has been tested locally with anaconda or docker first.
 
-* Commands to access cluster, upload files and connect JupyterHub
-
-  ```bash
-  #cluster 1
-  ssh -i MSBX5420-SPR23.pem hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR23.pem your_file hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
-  ssh -i MSBX5420-SPR23.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com
-  #cluster 2
-  ssh -i MSBX5420-SPR23.pem hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR23.pem your_file hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
-  ssh -i MSBX5420-SPR23.pem -N -L localhost:8081:localhost:9443 hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com
-  ```
-  
 * All clusters share the same AWS S3 bucket; if you read data from S3, you don't need to do additional steps
 
 ### Use Jupyter Notebook on Cluster
@@ -126,9 +111,9 @@ You can use any dataset you want for this project. In case you have troubles in 
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420-SPR23.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-34-220-138-138.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR23.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-54-188-248-34.us-west-2.compute.amazonaws.com
   #cluster 2
-  ssh -i MSBX5420-SPR23.pem -N -L localhost:8081:localhost:9443 hadoop@ec2-52-11-151-94.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR23.pem -N -L localhost:8081:localhost:9443 hadoop@ec2-34-220-3-240.us-west-2.compute.amazonaws.com
   ```
   
 * Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>. *<u>If you use multiple clusters for JupyterHub, please make sure you have the same username across the clusters.</u>* This will make all your users in different clusters share the notebooks.
