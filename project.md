@@ -1,14 +1,14 @@
 # MSBX 5420 Group Project
 
-The objective of this group project is to use what we learned in this course to solve some interesting and important problems. I will encourage you to define what is interesting and important from your business perspective. Team members may have different expertise: if you are strong with business - try to contribute from a business perspective, if you are strong in coding - try to contribute to coding. Teams are self-formed with 4-5 members. Anyone without a team will be randomly assigned into teams. Team information will be finalized by the end of March 12.
+The objective of this group project is to use what we learned in this course to solve some interesting and important problems. I will encourage you to define what is interesting and important from your business perspective. Team members may have different expertise: if you are strong with business - try to contribute from a business perspective, if you are strong in coding - try to contribute to coding. Teams are self-formed with 4-5 members. Anyone without a team will be randomly assigned into teams. Team information will be finalized by the end of March 10.
 
 ## Project Requirements
 
 ### Basic Requirements
 
-* Dataset: You can use any dataset in the project. However, your data should have substantial size. This is a big data course so datasets below 10MB are not allowed. Any dataset is possible, although some recommendations of datasets are provided in case you don't know what data to use. You can also collect your own data if you would like. If you are really interested in a data source but it requires additional data collection efforts, please discuss with the instructor for solutions.
+* Dataset: You can use any dataset in the project. However, your data should have substantial size. This is a big data course so datasets below <u>10MB</u> are not allowed. Any dataset is possible, although some recommendations of datasets are provided in case you don't know what data to use. You can also collect your own data if you would like. If you are really interested in a data source but it requires additional data collection efforts, please discuss with the instructor for solutions.
 * Environment: You can use Docker to develop and test your code. In the end, you are required to use AWS EMR cluster to run your analysis.
-* Programming Language: You can use any type of programming languages or business analytics tools, but must include the use of Spark with Python (PySpark), which needs to be deployed on the cluster; that is, if you need to implement a specific feature but it is not available in Spark, you have the flexibility to justify it and use other tools, but meanwhile you still need to make sure you have something implemented by PySpark in that case. Only with PySpark, your implementation show the potential of horizontal scaling on the AWS EMR cluster.
+* Programming Language: You can use any type of programming languages or business analytics tools, but must include the use of Spark with Python (PySpark), which needs to be deployed on the cluster; that is, if you need to implement a specific feature but it is not available in Spark, you have the flexibility to justify it and use other tools, but meanwhile you still need to make sure you have something implemented by PySpark in that case. Only with PySpark, your implementation shows the potential of horizontal scaling on the AWS EMR cluster.
 
 ### Functional Requirements
 
@@ -18,7 +18,7 @@ The objective of this group project is to use what we learned in this course to 
 ### Performance Requirements
 
 * You can test your application or analysis on your laptop with Docker; you are suggested to make sure your code work on Docker first and then run it on the cluster.
-* With your application deployed on the cluster, your implementation should show horizontal scale (i.e., when adding more nodes the cluster, the processing should be faster) and take advantage of distributed computing.
+* With your application deployed on the cluster, your implementation should show the potential of horizontal scaling (i.e., when adding more nodes the cluster, the processing should be faster) and take advantage of distributed computing.
 
 ### About ChatGPT
 
@@ -29,16 +29,16 @@ The objective of this group project is to use what we learned in this course to 
 
 > For all project deliverables, they should be submitted on Canvas by one of the team members
 
-* ***<u>Project Proposal (Due before Week 12 Consultations):</u>*** You will need to develop a <u>one-page proposal</u> of your project (the second page will not be graded), to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. Submit your project proposal <u>two days before your consultation time</u>. Note that the proposal is only a summary of your plan and progress, your actual progress doesn't have to be constrained by it. 
-* ***<u>Project Consultation (Week 12 Apr 3-9):</u>*** Your team will make an appointment (30 mins) with instructor by choosing your time slots (which will be confirmed in around Spring break). You will discuss your project with instructor, demonstrate your preliminary works, and get feedback on solving the problems. It is recommended that all team members join the consultation to demonstrate you are working as a whole team. No-show in consultation without reasons will affect participation grade.
-* ***<u>Project Presentation (Week 15 Apr 25/27):</u>*** You will present your problem and analysis (insights) in the class. Your presentation date (April 25 or 27) will be determined by the section of the majority of team members. You are required to do in-person presentation, if possible; only if you have special constraints or you are distance education students, you can do pre-recorded videos for presentation. Submit your presentation slides (and pre-recorded videos, if applicable) on the same day of your presentation. The order of presentation will be decided by lucky draw. 
+* ***<u>Project Proposal (Due Apr 3):</u>*** You will need to develop a <u>one-page proposal</u> of your project (the second page will not be graded), to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. Submit your project proposal <u>two days before your consultation time</u>. Note that the proposal is only a summary of your plan and progress, your actual progress doesn't have to be constrained by it. 
+* ***<u>Project Consultation (Week 12 Apr 4/5):</u>*** Your team will make an appointment (30 mins) with instructor by choosing your time slots (which will be confirmed in around Spring break). You will discuss your project with instructor, demonstrate your preliminary works, and get feedback on solving the problems. It is recommended that all team members join the consultation to demonstrate you are working as a whole team. No-show in consultation without reasons will affect participation grade.
+* ***<u>Project Presentation (Week 15 Apr 25/26):</u>*** You will present your problem and analysis (insights) in the class. Your presentation date (April 25 or 27) will be determined by the section of the majority of team members. You are required to do in-person presentation, if possible; only if you have special constraints or you are distance education students, you can do pre-recorded videos for presentation. Submit your presentation slides (and pre-recorded videos, if applicable) on the same day of your presentation. The order of presentation will be decided by lucky draw. 
   * **Presentation schedule and format requirement**
-    * All group members from in-person sections (003/002): in-person presentation only; date depends on the section of the majority of group members; group members who have unresolvable conflicts can record videos which are played by other members who present in-person
+    * All group members from in-person sections (001/002): in-person presentation only; date depends on the section of the majority of group members; group members who have unresolvable conflicts can record videos which are played by other members who present in-person
     * Most group members from in-person sections with some members from online section: members from online section can record videos and members who present in-person can play the video part from online members
-    * Most group members or all group members from online section (003B/577): recorded video presentations submitted on Canvas
+    * Most group members or all group members from online section (800): recorded video presentations submitted on Canvas
 
-* ***<u>Project Implementation (Due May 4):</u>*** You will refine your project after presentation and submit your final application (code, data, etc.) in the project as the deliverable of implementation.
-* ***<u>Project Report (Due May 4):</u>*** Based on your problems and insights, you will write a project report to motivate your problem, describe the dataset you use, present your findings and discuss the implications of your findings.
+* ***<u>Project Implementation (Due May 2):</u>*** You will refine your project after presentation and submit your final application (code, data, etc.) in the project as the deliverable of implementation.
+* ***<u>Project Report (Due May 2):</u>*** Based on your problems and insights, you will write a project report to motivate your problem, describe the dataset you use, present your findings and discuss the implications of your findings.
 
 ## Project Grading (40% in total)
 
@@ -60,20 +60,22 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * COVID-19 related data ([https://www.kaggle.com/datasets?topic=covidDataset](https://www.kaggle.com/datasets?topic=covidDataset))
 * AWS opendata ([https://registry.opendata.aws/](https://registry.opendata.aws/))
-* Amazon review data ([http://jmcauley.ucsd.edu/data/amazon/](http://jmcauley.ucsd.edu/data/amazon/))
+* Amazon review data ([https://cseweb.ucsd.edu/~jmcauley/datasets.html#amazon_reviews](https://cseweb.ucsd.edu/~jmcauley/datasets.html#amazon_reviews))
 * Airbnb data ([http://insideairbnb.com/get-the-data](http://insideairbnb.com/get-the-data))
 * Bike share data ([https://www.citibikenyc.com/system-data](https://www.citibikenyc.com/system-data) or [https://www.lyft.com/bikes/bay-wheels/system-data](https://www.lyft.com/bikes/bay-wheels/system-data))
-* GitHub data ([https://www.githubarchive.org/](https://www.githubarchive.org/) or [https://ghtorrent.org/](https://ghtorrent.org/))
+* GitHub data ([https://www.githubarchive.org/](https://www.githubarchive.org/))
 * Bitcoin data ([https://www.kaggle.com/bigquery/bitcoin-blockchain](https://www.kaggle.com/bigquery/bitcoin-blockchain))
 * Lending data ([https://www.kaggle.com/wordsforthewise/lending-club](https://www.kaggle.com/wordsforthewise/lending-club) or [https://www.kiva.org/build/data-snapshots](https://www.kiva.org/build/data-snapshots))
 * Sports data ([https://www.kaggle.com/datasets/hugomathien/soccer](https://www.kaggle.com/datasets/hugomathien/soccer) or [https://www.kaggle.com/datasets/martinellis/nhl-game-data](https://www.kaggle.com/datasets/martinellis/nhl-game-data))
-* E-Sports data ([https://www.kaggle.com/devinanzelmo/dota-2-matches](https://www.kaggle.com/devinanzelmo/dota-2-matches) or [https://www.kaggle.com/skihikingkevin/pubg-match-deaths](https://www.kaggle.com/skihikingkevin/pubg-match-deaths))
+* E-Sports data ([https://www.kaggle.com/devinanzelmo/dota-2-matches](https://www.kaggle.com/devinanzelmo/dota-2-matches) or [http://aligulac.com/about/db/](http://aligulac.com/about/db/))
 
 ## Cluster Environment Notes
 
 ### Connect to AWS EMR Cluster
 
-> The AWS EMR clusters for project are available from March April 10 to May 7
+> The AWS EMR clusters for project are available from March April 8 to May 5
+>
+> Details of the cluster will be updated once the clusters are created
 
 * Leeds AWS EMR Cluster: Leeds Technology Service has supported for the creation of a series of AWS clusters for the project. 
 
@@ -82,7 +84,7 @@ You can use any dataset you want for this project. In case you have troubles in 
   * cluster 1: *ec2-54-188-248-34.us-west-2.compute.amazonaws.com*
   * cluster 2: *ec2-34-220-3-240.us-west-2.compute.amazonaws.com*
 
-* Private key file is same with the first cluster - `MSBX5420-SPR23.pem` 
+* Private key file is same with the first cluster - `MSBX5420-SPR24.pem` 
 
 * For any cluster, create your team directory under absolute path `/mnt1/msbx5420_teams` first and then copy your files to your team directory with `scp`
 
@@ -90,15 +92,15 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Please follow the rules to use cluster and create directories. Do not to use the directories under entry directory when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under entry directory will be migrated to `/mnt1/msbx5420_teams`. If you have very large data files and have troubles of uploading them to the cluster, please let the instructor know to help you upload the data.
 
-* Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR23.pem` inside your current directory with correct permission; `sudo chmod 600 MSBX5420-SPR23.pem` on Mac if necessary)
+* Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR24.pem` inside your current directory with correct permission; `sudo chmod 600 MSBX5420-SPR24.pem` on Mac if necessary)
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420-SPR23.pem hadoop@ec2-54-188-248-34.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR23.pem your_file hadoop@ec2-54-188-248-34.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR24.pem hadoop@ec2-54-188-248-34.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR24.pem your_file hadoop@ec2-54-188-248-34.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
   #cluster 2
-  ssh -i MSBX5420-SPR23.pem hadoop@ec2-34-220-3-240.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR23.pem your_file hadoop@ec2-34-220-3-240.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR24.pem hadoop@ec2-34-220-3-240.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR24.pem your_file hadoop@ec2-34-220-3-240.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
   ```
 
 > If the cluster you are using is crowded and hard to get access, you can use the other cluster; but still, make sure your code has been tested locally with anaconda or docker first.
@@ -111,9 +113,9 @@ You can use any dataset you want for this project. In case you have troubles in 
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420-SPR23.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-54-188-248-34.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR24.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-54-188-248-34.us-west-2.compute.amazonaws.com
   #cluster 2
-  ssh -i MSBX5420-SPR23.pem -N -L localhost:8081:localhost:9443 hadoop@ec2-34-220-3-240.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420-SPR24.pem -N -L localhost:8081:localhost:9443 hadoop@ec2-34-220-3-240.us-west-2.compute.amazonaws.com
   ```
   
 * Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>. *<u>If you use multiple clusters for JupyterHub, please make sure you have the same username across the clusters.</u>* This will make all your users in different clusters share the notebooks.
@@ -137,22 +139,22 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * For deployment on the cluster, you are recommended to AWS S3; it is a common practice for data storage when using AWS, and it allows your data accessible across clusters
 
-* Our S3 bucket on cluster is `s3://msbx5420-spr23`
+* Our S3 bucket on cluster is `s3://msbx5420-spr24`
 
 * Data stored in S3 can be shared across clusters, so when you switch cluster, S3 can be very convenient. That is, S3 doesn't rely on the cluster, so if there is any issue on the cluster, what you save on S3 won't lose.
 
 * To check files and copy files to S3 bucket, you can use the following commands (make sure you have created your team directory on master node and uploaded your files there)
 
   ```bash
-  aws s3 ls s3://msbx5420-spr23
-  aws s3 ls s3://msbx5420-spr23/team_directory/
+  aws s3 ls s3://msbx5420-spr24
+  aws s3 ls s3://msbx5420-spr24/team_directory/
   #copy single file, the last / is required
-  aws s3 cp /mnt1/msbx5420_teams/team_directory/file.name s3://msbx5420-spr23/team_directory/
+  aws s3 cp /mnt1/msbx5420_teams/team_directory/file.name s3://msbx5420-spr24/team_directory/
   #copy the entire directory
-  aws s3 cp /mnt1/msbx5420_teams/team_directory s3://msbx5420-spr23/team_directory --recursive
+  aws s3 cp /mnt1/msbx5420_teams/team_directory s3://msbx5420-spr24/team_directory --recursive
   ```
 
-* Save or read data on S3 bucket with S3 path `s3://msbx5420-spr23/team_directory/file.name`
+* Save or read data on S3 bucket with S3 path `s3://msbx5420-spr24/team_directory/file.name`
 
 * Try to clean up your files on the master node after you put them to S3
 
