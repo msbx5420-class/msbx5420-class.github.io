@@ -31,7 +31,7 @@ The objective of this group project is to use what we learned in this course to 
 
 * ***<u>Project Proposal (Due Apr 3):</u>*** You will need to develop a <u>one-page proposal</u> of your project (the second page will not be graded), to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. Submit your project proposal <u>one day before your consultation time</u>. Note that the proposal is only a summary of your plan and progress, your actual progress doesn't have to be constrained by it. 
 * ***<u>Project Consultation (Week 12 Apr 4/5):</u>*** Your team will make an appointment (30 mins) with instructor by choosing your time slots (which will be confirmed in around Spring break). You will discuss your project with instructor, demonstrate your preliminary works, and get feedback on solving the problems. It is recommended that all team members join the consultation to demonstrate you are working as a whole team. No-show in consultation without reasons will affect participation grade.
-* ***<u>Project Presentation (Week 15 Apr 25/26):</u>*** You will present your problem and analysis (insights) in the class. Your presentation date (April 25 or 27) will be determined by the section of the majority of team members. You are required to do in-person presentation, if possible; only if you have special constraints or you are distance education students, you can do pre-recorded videos for presentation. Submit your presentation slides (and pre-recorded videos, if applicable) on the same day of your presentation. The order of presentation will be decided by lucky draw. 
+* ***<u>Project Presentation (Week 15 Apr 25/26):</u>*** You will present your problem and analysis (insights) in the class. Your presentation date (April 25 or 26) will be determined by the section of the majority of team members. You are required to do in-person presentation, if possible; only if you have special constraints or you are distance education students, you can do pre-recorded videos for presentation. Submit your presentation slides (and pre-recorded videos, if applicable) on the same day of your presentation. The order of presentation will be decided by lucky draw. 
   * **Presentation schedule and format requirement**
     * All group members from in-person sections (001/002): in-person presentation only; date depends on the section of the majority of group members; group members who have unresolvable conflicts can record videos which are played by other members who present in-person
     * Most group members from in-person sections with some members from online section: members from online section can record videos and members who present in-person can play the video part from online members
@@ -73,16 +73,16 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Connect to AWS EMR Cluster
 
-> The AWS EMR clusters for project are available from March April 8 to May 5
+> The AWS EMR clusters for project are available from March April 15 to May 6
 >
 > Details of the cluster will be updated once the clusters are created
 
 * Leeds AWS EMR Cluster: Leeds Technology Service has supported for the creation of a series of AWS clusters for the project. 
 
-* Host addresses are (to be updated):
+* Host addresses are:
 
-  * cluster 1: *ec2-54-188-248-34.us-west-2.compute.amazonaws.com*
-  * cluster 2: *ec2-34-220-3-240.us-west-2.compute.amazonaws.com*
+  * cluster 1: *ec2-52-32-179-222.us-west-2.compute.amazonaws.com*
+  * cluster 2: *ec2-54-213-235-236.us-west-2.compute.amazonaws.com*
 
 * Private key file is same with the first cluster - `MSBX5420-SPR24.pem` 
 
@@ -96,40 +96,40 @@ You can use any dataset you want for this project. In case you have troubles in 
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420-SPR24.pem hadoop@ec2-54-188-248-34.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR24.pem your_file hadoop@ec2-54-188-248-34.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR24.pem hadoop@ec2-52-32-179-222.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR24.pem {your_file} hadoop@ec2-52-32-179-222.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
   #cluster 2
-  ssh -i MSBX5420-SPR24.pem hadoop@ec2-34-220-3-240.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR24.pem your_file hadoop@ec2-34-220-3-240.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/team_directory
+  ssh -i MSBX5420-SPR24.pem hadoop@ec2-54-213-235-236.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420-SPR24.pem {your_file} hadoop@ec2-54-213-235-236.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
   ```
 
-> If the cluster you are using is crowded and hard to get access, you can use the other cluster; but still, make sure your code has been tested locally with anaconda or docker first.
+> If the cluster you are using is crowded and hard to get access, you can use the other cluster; but still, make sure your code has been tested locally with Docker first.
 
 * All clusters share the same AWS S3 bucket; if you read data from S3, you don't need to do additional steps
 
 ### Use Jupyter Notebook on Cluster
 
-* Use ssh port forwarding to connect to JupyterHub (or add `-f` to have persistent connection in the backend)
-
-  ```bash
-  #cluster 1
-  ssh -i MSBX5420-SPR24.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-54-188-248-34.us-west-2.compute.amazonaws.com
-  #cluster 2
-  ssh -i MSBX5420-SPR24.pem -N -L localhost:8081:localhost:9443 hadoop@ec2-34-220-3-240.us-west-2.compute.amazonaws.com
-  ```
-  
 * Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>. *<u>If you use multiple clusters for JupyterHub, please make sure you have the same username across the clusters.</u>* This will make all your users in different clusters share the notebooks.
 
   ```bash
-  sudo docker exec jupyterhub useradd -m -s /bin/bash -N username
-  sudo docker exec jupyterhub bash -c "echo username:password | chpasswd"
+  sudo docker exec jupyterhub useradd -m -s /bin/bash -N {username}
+  sudo docker exec jupyterhub bash -c "echo {username}:{password} | chpasswd"
   ```
+  
+* Use ssh port forwarding to connect to JupyterHub
 
+  ```bash
+  #cluster 1
+  ssh -i MSBX5420-SPR24.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-52-32-179-222.us-west-2.compute.amazonaws.com
+  #cluster 2
+  ssh -i MSBX5420-SPR24.pem -N -L localhost:8081:localhost:9443 hadoop@ec2-54-213-235-236.us-west-2.compute.amazonaws.com
+  ```
+  
 * Go to `https://localhost:8080` (cluster 1), or `https://localhost:8081` (cluster 2) in browser and login with your team username and password; then create or upload your notebooks.
 
-* When you see security warning, click "Advanced" or "Details" to continue and bypass it. If you are using MacOS Catalina with Chrome, blindly type `thisisunsafe` in the page and press `enter` to bypass it.
+* When you see security warning, click "Advanced" or "Details" to continue and bypass it. If you do not find "Advanced" or "Details", blindly type `thisisunsafe` in the page and press `enter` to bypass it.
 
-* To run PySpark program, use the kernel `PySpark` for notebook; you can use sparkmagic with `sc.install_pypi_package()` to make additional packages effective within the notebook. If you need additional python packages on the Python 3 kernel, let the instructor know as early as possible. **Please do not install packages yourself directly on the cluster**.
+* To run PySpark program, use the kernel `PySpark` for notebook; you can use sparkmagic with `sc.install_pypi_package()` to make additional packages effective within the notebook. If you need additional python packages on the Python 3 kernel, let the instructor know as early as possible. **Please do not install packages yourself directly on the cluster using pip**.
 
 * In the notebook, you can use sparkmagic to configure your application in terms of resource use; please follow the Wikipedia example to apply it.
 
@@ -147,14 +147,14 @@ You can use any dataset you want for this project. In case you have troubles in 
 
   ```bash
   aws s3 ls s3://msbx5420-spr24
-  aws s3 ls s3://msbx5420-spr24/team_directory/
+  aws s3 ls s3://msbx5420-spr24/teams/{team_directory}/
   #copy single file, the last / is required
-  aws s3 cp /mnt1/msbx5420_teams/team_directory/file.name s3://msbx5420-spr24/team_directory/
+  aws s3 cp /mnt1/msbx5420_teams/{team_directory}/{file.name} s3://msbx5420-spr24/teams/{team_directory}/
   #copy the entire directory
-  aws s3 cp /mnt1/msbx5420_teams/team_directory s3://msbx5420-spr24/team_directory --recursive
+  aws s3 cp /mnt1/msbx5420_teams/{team_directory} s3://msbx5420-spr24/teams/{team_directory} --recursive
   ```
 
-* Save or read data on S3 bucket with S3 path `s3://msbx5420-spr24/team_directory/file.name`
+* In your Python notebook on JupyterHub, save or read data on S3 bucket with S3 path `s3://msbx5420-spr24/teams/{team_directory}/{file.name}`
 
 * Try to clean up your files on the master node after you put them to S3
 
