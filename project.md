@@ -45,7 +45,7 @@ The objective of this group project is to use what we learned in this course to 
 > Grades on Canvas will be 10 pts, 20 pts, 40 pts and 30 pts for each of the component, respectively. Then the total (100 pts) will be converted as 40% of final grade.
 
 * ***<u>Project Proposal (4%):</u>*** Please be concise on your proposal within one-page. <u>Contents exceeding one-page will not be graded.</u>
-* ***<u>Project Presentation (8%):</u>*** Presentation will be 13-16 (to be updated based on total groups) mins for each group. Make sure your presentation length fall into the range. For either in-person or pre-recorded presentation, make sure all of your team members have engagement in the presentation.
+* ***<u>Project Presentation (8%):</u>*** Presentation will be 13-16 mins for each group. Make sure your presentation length fall into the range. For either in-person or pre-recorded presentation, make sure all of your team members have engagement in the presentation.
 * ***<u>Project Implementation (16%):</u>*** Your implementation (analysis and code) will take 10%, while the deployment of your application (pyspark) on the cluster will take 6%.
 * ***<u>Project Report (12%):</u>*** The final report has no page limits (typically 10-15 pages would be sufficient). Your final report should include the following components: 
   * Abstract / summary of your report
