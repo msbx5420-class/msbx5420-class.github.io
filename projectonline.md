@@ -1,6 +1,6 @@
 # MSBX 5420 Final Project
 
-The objective of this group project is to use what we learned in this course to solve some interesting and important problems. I will encourage you to define what is interesting and important from your business perspective. This is an individual project to allow you to solve a problem with real world dataset and practice what's learned from the course.
+The objective of this project is to use what we learned in this course to solve some interesting and important problems. I will encourage you to define what is interesting and important from your business perspective. This is an individual project to allow you to solve a problem with real world dataset and practice what's learned from the course.
 
 ## Project Requirements
 
