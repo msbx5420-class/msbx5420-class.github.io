@@ -12,7 +12,7 @@ The objective of this project is to use what we learned in this course to solve 
 
 ### Functional Requirements
 
-* Data Ingestion: You can read local files when developing your code locally, but when deploying your code on AWS cluster, you need to save your dataset into AWS S3. Then read data from AWS S3 to do analysis on the AWS cluster. Typically S3 is more convenient in this project because the data in S3 can be shared across clusters. It is optional, but useful if you save your data as parquet files in AWS S3 (you can save other type of data as parquet file either through Pandas or PySpark).
+* Data Ingestion: You can read local files when developing your code locally, but when deploying your code on AWS cluster, you need to save your dataset into AWS S3. Then read data from AWS S3 to do analysis on the AWS cluster. It is optional, but useful if you save your data as parquet files in AWS S3 (you can save other type of data as parquet file either through Pandas or PySpark).
 * Obtain statistics and perform analysis of the ingested dataset (with PySpark or other packages if necessary) and display your insights (use Jupyter notebook or other type of visualization).
 
 ### Performance Requirements
