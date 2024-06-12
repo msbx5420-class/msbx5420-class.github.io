@@ -90,7 +90,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Use Jupyter Notebook on Cluster
 
-* Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>. *<u>If you use multiple clusters for JupyterHub, please make sure you have the same username across the clusters.</u>* This will make all your users in different clusters share the notebooks.
+* Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>. 
 
   ```bash
   sudo docker exec jupyterhub useradd -m -s /bin/bash -N {username}
