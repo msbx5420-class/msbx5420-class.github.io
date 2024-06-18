@@ -29,7 +29,7 @@ The objective of this project is to use what we learned in this course to solve 
 
 > For all project deliverables, they should be submitted on Canvas by one of the team members
 
-* ***<u>Project Proposal (Due Week 03):</u>*** You will need to develop a <u>one-page proposal</u> of your project (the second page will not be graded), to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. 
+* ***<u>Project Proposal (Due Week 04):</u>*** You will need to develop a <u>one-page proposal</u> of your project (the second page will not be graded), to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. 
 * ***<u>Project Implementation (Due Week 06):</u>*** You will submit your final application (code, data, etc.) in the project as the deliverable of implementation.
 * ***<u>Project Report (Due Week 06):</u>*** Based on your problems and insights, you will write a project report to motivate your problem, describe the dataset you use, present your findings and discuss the implications of your findings.
 
