@@ -71,21 +71,21 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Leeds AWS EMR Cluster: Leeds Technology Service has supported for the creation of a series of AWS clusters for the project. 
 
-* Host address is: *ec2-52-32-179-222.us-west-2.compute.amazonaws.com*
+* Host address is: *ec2-34-221-132-115.us-west-2.compute.amazonaws.com*
 
-* Private key file is same with the first cluster - `MSBX5420-SUM24.pem` 
+* Private key file is same with the cluster in lab session: `MSBX5420.pem` 
 
-* For any cluster, create your team directory under absolute path `/mnt1/msbx5420_projects` first and then copy your files to your team directory with `scp`
+* In the cluster, create your team directory under absolute path `/mnt1/msbx5420_projects` first and then copy your files to your team directory with `scp`
 
 * All personal directories (if needed) are under `/mnt1/msbx5420_exercises` and all team directories are under `/mnt1/msbx5420_projects`
 
 * Please follow the rules to use cluster and create directories. Do not to use the directories under entry directory when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under entry directory will be migrated to `/mnt1/msbx5420_projects`. If you have very large data files and have troubles of uploading them to the cluster, please let the instructor know to help you upload the data.
 
-* Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SUM24.pem` inside your current directory with correct permission; `sudo chmod 600 MSBX5420-SUM24.pem` on Mac if necessary)
+* Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420.pem` inside your current directory with correct permission; `sudo chmod 600 MSBX5420.pem` on Mac if necessary)
 
   ```bash
-  ssh -i MSBX5420-SPR24.pem hadoop@ec2-52-32-179-222.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR24.pem {your_file} hadoop@ec2-52-32-179-222.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_projects/{user_directory}
+  ssh -i MSBX5420.pem hadoop@ec2-34-221-132-115.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420.pem {your_file} hadoop@ec2-34-221-132-115.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_projects/{user_directory}
   ```
 
 ### Use Jupyter Notebook on Cluster
@@ -100,16 +100,16 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Use ssh port forwarding to connect to JupyterHub
 
   ```bash
-  ssh -i MSBX5420-SPR24.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-52-32-179-222.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-34-221-132-115.us-west-2.compute.amazonaws.com
   ```
   
 * Go to `https://localhost:8080` in browser and login with your team username and password; then create or upload your notebooks.
 
 * When you see security warning, click "Advanced" or "Details" to continue and bypass it. If you do not find "Advanced" or "Details", blindly type `thisisunsafe` in the page and press `enter` to bypass it.
 
-* To run PySpark program, use the kernel `PySpark` for notebook; you can use sparkmagic with `sc.install_pypi_package()` to make additional packages effective within the notebook. If you need additional python packages on the Python 3 kernel, let the instructor know as early as possible. **Please do not install packages yourself directly on the cluster using pip**.
+* To run PySpark program, use the kernel `PySpark` for notebook; you can use sparkmagic with `sc.install_pypi_package()` to make additional packages effective within the notebook. **Please do not install packages yourself directly on the cluster using pip**.
 
-* In the notebook, you can use sparkmagic to configure your application in terms of resource use; please follow the Wikipedia example to apply it.
+* In the notebook, you can use sparkmagic to configure your application in terms of resource use; please follow the sparkmagic and Wikipedia examples to apply it.
 
 * Please avoid uploading data files in JupyterHub. The data files you upload to JupyterHub workspace cannot be loaded by PySpark kernel and running analysis directly from the data file in the workspace will easily overload the master node.
 
@@ -117,20 +117,20 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * For deployment on the cluster, you are recommended to AWS S3; it is a common practice for data storage when using AWS.
 
-* Our S3 bucket on cluster is `s3://msbx5420-sum24`
+* Our S3 bucket on cluster is `s3://msbx-5420`
 
 * To check files and copy files to S3 bucket, you can use the following commands (make sure you have created your team directory on master node and uploaded your files there)
 
   ```bash
-  aws s3 ls s3://msbx5420-sum24
-  aws s3 ls s3://msbx5420-sum24/projects/{user_directory}/
+  aws s3 ls s3://msbx-5420
+  aws s3 ls s3://msbx-5420/projects/{user_directory}/
   #copy single file, the last / is required
-  aws s3 cp /mnt1/msbx5420_projects/{user_directory}/{file.name} s3://msbx5420-sum24/projects/{user_directory}/
+  aws s3 cp /mnt1/msbx5420_projects/{user_directory}/{file.name} s3://msbx-5420/projects/{user_directory}/
   #copy the entire directory
-  aws s3 cp /mnt1/msbx5420_projects/{user_directory} s3://msbx5420-sum24/projects/{user_directory} --recursive
+  aws s3 cp /mnt1/msbx5420_projects/{user_directory} s3://msbx-5420/projects/{user_directory} --recursive
   ```
 
-* In your Python notebook on JupyterHub, save or read data on S3 bucket with S3 path `s3://msbx5420-sum24/projects/{user_directory}/{file.name}`
+* In your Python notebook on JupyterHub, save or read data on S3 bucket with S3 path `s3://msbx-5420/projects/{user_directory}/{file.name}`
 
 * If your dataset is super large, please let the instructor know to help your upload the data
 
