@@ -1,6 +1,6 @@
 # MSBX 5420 Group Project
 
-The objective of this group project is to use what we learned in this course to solve some interesting and important problems. I will encourage you to define what is interesting and important from your business perspective. Team members may have different expertise: if you are strong with business - try to contribute from a business perspective, if you are strong in coding - try to contribute to coding. Teams are self-formed with 4-5 members. Anyone without a team will be randomly assigned into teams. Team information will be finalized by the end of March 10.
+The objective of this group project is to use what we learned in this course to solve some interesting and important problems. I will encourage you to define what is interesting and important from your business perspective. Team members may have different expertise: if you are strong with business - try to contribute from a business perspective, if you are strong in coding - try to contribute to coding. Teams are self-formed with 4-5 members. Anyone without a team will be randomly assigned into teams. Team information will be finalized by the end of March 9.
 
 ## Project Requirements
 
@@ -22,23 +22,23 @@ The objective of this group project is to use what we learned in this course to 
 
 ### About ChatGPT
 
-* ChatGPT or generative AI tools such as GPT3 have been useful for writing reports, but there have been discussions around whether they should be allowed for classrooms. In this course, you are allowed to use ChatGPT or AI tools for writing reports if they can generate the content you want. But the condition is that you need to clearly state that you use ChatGPT or other AI tools in writing the report.
+* ChatGPT or generative AI tools have been useful for writing reports, but there have been discussions around whether they should be allowed for classrooms. In this course, you are allowed to use ChatGPT or AI tools for writing reports if they can generate the content you want. But the condition is that you need to clearly state that you use ChatGPT or other AI tools in writing the report.
 * Note that the use of ChatGPT or AI tools in writing report will NOT affect any grading of your project report, as long as you indicate which tool you use. However, it may take adverse effect on your grading if your report is very likely written by AI but you don't state the use of AI in the report.
 
 ## Project Timeline and Deliverable
 
 > For all project deliverables, they should be submitted on Canvas by one of the team members
 
-* ***<u>Project Proposal (Due Apr 3):</u>*** You will need to develop a <u>one-page proposal</u> of your project (the second page will not be graded), to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. Submit your project proposal <u>one day before your consultation time</u>. Note that the proposal is only a summary of your plan and progress, your actual progress doesn't have to be constrained by it. 
-* ***<u>Project Consultation (Week 12 Apr 4/5):</u>*** Your team will make an appointment (30 mins) with instructor by choosing your time slots (which will be confirmed in around Spring break). You will discuss your project with instructor, demonstrate your preliminary works, and get feedback on solving the problems. It is recommended that all team members join the consultation to demonstrate you are working as a whole team. No-show in consultation without reasons will affect participation grade.
-* ***<u>Project Presentation (Week 15 Apr 25/26):</u>*** You will present your problem and analysis (insights) in the class. Your presentation date (April 25 or 26) will be determined by the section of the majority of team members. You are required to do in-person presentation, if possible; only if you have special constraints or you are distance education students, you can do pre-recorded videos for presentation. Submit your presentation slides (and pre-recorded videos, if applicable) on the same day of your presentation. The order of presentation will be decided by lucky draw. 
+* ***<u>Project Proposal (Due Apr 2):</u>*** You will need to develop a <u>one-page proposal</u> of your project (the second page will not be graded), to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. Submit your project proposal <u>one day before your consultation time</u>. Note that the proposal is only a summary of your plan and progress, your actual progress doesn't have to be constrained by it. 
+* ***<u>Project Consultation (Week 12 Apr 3/4):</u>*** Your team will make an appointment (30 mins) with instructor by choosing your time slots (which will be confirmed in around Spring break). You will discuss your project with instructor, demonstrate your preliminary works, and get feedback on solving the problems. It is recommended that all team members join the consultation to demonstrate you are working as a whole team. No-show in consultation without reasons will affect participation grade.
+* ***<u>Project Presentation (Week 15 Apr 24/25):</u>*** You will present your problem and analysis (insights) in the class. Your presentation date (April 24 or 25) will be determined by the section of the majority of team members. You are required to do in-person presentation, if possible; only if you have special constraints or you are distance education students, you can do pre-recorded videos for presentation. Submit your presentation slides (and pre-recorded videos, if applicable) on the same day of your presentation. The order of presentation will be decided by lucky draw. 
   * **Presentation schedule and format requirement**
     * All group members from in-person sections (001/002): in-person presentation only; date depends on the section of the majority of group members; group members who have unresolvable conflicts can record videos which are played by other members who present in-person
     * Most group members from in-person sections with some members from online section: members from online section can record videos and members who present in-person can play the video part from online members
     * Most group members or all group members from online section (800): recorded video presentations submitted on Canvas
 
-* ***<u>Project Implementation (Due May 2):</u>*** You will refine your project after presentation and submit your final application (code, data, etc.) in the project as the deliverable of implementation.
-* ***<u>Project Report (Due May 2):</u>*** Based on your problems and insights, you will write a project report to motivate your problem, describe the dataset you use, present your findings and discuss the implications of your findings.
+* ***<u>Project Implementation (Due May 1):</u>*** You will refine your project after presentation and submit your final application (code, data, etc.) in the project as the deliverable of implementation.
+* ***<u>Project Report (Due May 1):</u>*** Based on your problems and insights, you will write a project report to motivate your problem, describe the dataset you use, present your findings and discuss the implications of your findings.
 
 ## Project Grading (40% in total)
 
@@ -69,11 +69,11 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Sports data ([https://www.kaggle.com/datasets/hugomathien/soccer](https://www.kaggle.com/datasets/hugomathien/soccer) or [https://www.kaggle.com/datasets/martinellis/nhl-game-data](https://www.kaggle.com/datasets/martinellis/nhl-game-data))
 * E-Sports data ([https://www.kaggle.com/devinanzelmo/dota-2-matches](https://www.kaggle.com/devinanzelmo/dota-2-matches) or [http://aligulac.com/about/db/](http://aligulac.com/about/db/))
 
-## Cluster Environment Notes
+## Cluster Environment Notes (To Be Updated in April)
 
 ### Connect to AWS EMR Cluster
 
-> The AWS EMR clusters for project are available from March April 15 to May 6
+> The AWS EMR clusters for project are available from April 13 to May 4
 >
 > Details of the cluster will be updated once the clusters are created
 
