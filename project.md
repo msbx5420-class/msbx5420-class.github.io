@@ -84,7 +84,7 @@ You can use any dataset you want for this project. In case you have troubles in 
   * cluster 1: *ec2-52-32-179-222.us-west-2.compute.amazonaws.com*
   * cluster 2: *ec2-54-213-235-236.us-west-2.compute.amazonaws.com*
 
-* Private key file is same with the first cluster - `MSBX5420-SPR25.pem` 
+* Private key file is same with the first cluster - `MSBX5420.pem` 
 
 * For any cluster, create your team directory under absolute path `/mnt1/msbx5420_teams` first and then copy your files to your team directory with `scp`
 
@@ -92,15 +92,15 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Please follow the rules to use cluster and create directories. Do not to use the directories under entry directory when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under entry directory will be migrated to `/mnt1/msbx5420_teams`. If you have very large data files and have troubles of uploading them to the cluster, please let the instructor know to help you upload the data.
 
-* Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420-SPR24.pem` inside your current directory with correct permission; `sudo chmod 600 MSBX5420-SPR24.pem` on Mac if necessary)
+* Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420.pem` inside your current directory with correct permission; `sudo chmod 600 MSBX5420.pem` on Mac if necessary)
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420-SPR25.pem hadoop@ec2-52-32-179-222.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR25.pem {your_file} hadoop@ec2-52-32-179-222.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
+  ssh -i MSBX5420.pem hadoop@ec2-52-32-179-222.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420.pem {your_file} hadoop@ec2-52-32-179-222.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
   #cluster 2
-  ssh -i MSBX5420-SPR25.pem hadoop@ec2-54-213-235-236.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420-SPR25.pem {your_file} hadoop@ec2-54-213-235-236.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
+  ssh -i MSBX5420.pem hadoop@ec2-54-213-235-236.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420.pem {your_file} hadoop@ec2-54-213-235-236.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
   ```
 
 > If the cluster you are using is crowded and hard to get access, you can use the other cluster; but still, make sure your code has been tested locally with Docker first.
@@ -120,9 +120,9 @@ You can use any dataset you want for this project. In case you have troubles in 
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420-SPR24.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-52-32-179-222.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-52-32-179-222.us-west-2.compute.amazonaws.com
   #cluster 2
-  ssh -i MSBX5420-SPR24.pem -N -L localhost:8081:localhost:9443 hadoop@ec2-54-213-235-236.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420.pem -N -L localhost:8081:localhost:9443 hadoop@ec2-54-213-235-236.us-west-2.compute.amazonaws.com
   ```
   
 * Go to `https://localhost:8080` (cluster 1), or `https://localhost:8081` (cluster 2) in browser and login with your team username and password; then create or upload your notebooks.
@@ -139,22 +139,22 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * For deployment on the cluster, you are recommended to AWS S3; it is a common practice for data storage when using AWS, and it allows your data accessible across clusters
 
-* Our S3 bucket on cluster is `s3://msbx5420-spr25`
+* Our S3 bucket on cluster is `s3://msbx-5420`
 
 * Data stored in S3 can be shared across clusters, so when you switch cluster, S3 can be very convenient. That is, S3 doesn't rely on the cluster, so if there is any issue on the cluster, what you save on S3 won't lose.
 
 * To check files and copy files to S3 bucket, you can use the following commands (make sure you have created your team directory on master node and uploaded your files there)
 
   ```bash
-  aws s3 ls s3://msbx5420-spr25
-  aws s3 ls s3://msbx5420-spr25/teams/{team_directory}/
+  aws s3 ls s3://msbx-5420
+  aws s3 ls s3://msbx-5420/teams/{team_directory}/
   #copy single file, the last / is required
-  aws s3 cp /mnt1/msbx5420_teams/{team_directory}/{file.name} s3://msbx5420-spr25/teams/{team_directory}/
+  aws s3 cp /mnt1/msbx5420_teams/{team_directory}/{file.name} s3://msbx-5420/teams/{team_directory}/
   #copy the entire directory
-  aws s3 cp /mnt1/msbx5420_teams/{team_directory} s3://msbx5420-spr25/teams/{team_directory} --recursive
+  aws s3 cp /mnt1/msbx5420_teams/{team_directory} s3://msbx-5420/teams/{team_directory} --recursive
   ```
 
-* In your Python notebook on JupyterHub, save or read data on S3 bucket with S3 path `s3://msbx5420-spr25/teams/{team_directory}/{file.name}`
+* In your Python notebook on JupyterHub, save or read data on S3 bucket with S3 path `s3://msbx-5420/teams/{team_directory}/{file.name}`
 
 * Try to clean up your files on the master node after you put them to S3
 
