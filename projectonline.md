@@ -39,7 +39,7 @@ The objective of this project is to use what we learned in this course to solve 
 
 * ***<u>Project Proposal (5%):</u>*** Please be concise on your proposal within one-page. <u>Contents exceeding one-page will not be graded.</u>
 * ***<u>Project Implementation (20%):</u>*** Your implementation (analysis and code) will take 12%, while the deployment of your application (pyspark) on the cluster will take 8%.
-* ***<u>Project Report (5%):</u>*** The final report has no page limits (typically 5-10 pages). Your final report should include the following components: 
+* ***<u>Project Report (5%):</u>*** The final report has no page limits (typically 10-15 pages would be sufficient). There is not standard rubric for the report, but your report should discuss your processes or insights rather than displaying your code. For a reference, your final report can include the following components: 
   * Abstract / summary of your report
   * The background and motivation of your questions
   * The dataset and analysis methods
