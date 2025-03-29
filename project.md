@@ -37,8 +37,8 @@ The objective of this group project is to use what we learned in this course to 
     * Most group members from in-person sections with some members from online section: members from online section can record videos and members who present in-person can play the video part from online members
     * Most group members or all group members from online section (800): recorded video presentations submitted on Canvas
 
-* ***<u>Project Implementation (Due May 1):</u>*** You will refine your project after presentation and submit your final application (code, data, etc.) in the project as the deliverable of implementation.
-* ***<u>Project Report (Due May 1):</u>*** Based on your problems and insights, you will write a project report to motivate your problem, describe the dataset you use, present your findings and discuss the implications of your findings.
+* ***<u>Project Implementation (Due May 2):</u>*** You will refine your project after presentation and submit your final application (code, data, etc.) in the project as the deliverable of implementation.
+* ***<u>Project Report (Due May 2):</u>*** Based on your problems and insights, you will write a project report to motivate your problem, describe the dataset you use, present your findings and discuss the implications of your findings.
 
 ## Project Grading (40% in total)
 
