@@ -75,7 +75,6 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 > The AWS EMR clusters for project are available from April 15 to May 4
 >
-> Details of the cluster will be updated once the clusters are created
 
 * Leeds AWS EMR Cluster: Leeds Technology Service has supported for the creation of a series of AWS clusters for the project. 
 
