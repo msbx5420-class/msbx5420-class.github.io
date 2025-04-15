@@ -69,11 +69,11 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Sports data ([https://www.kaggle.com/datasets/hugomathien/soccer](https://www.kaggle.com/datasets/hugomathien/soccer) or [https://www.kaggle.com/datasets/martinellis/nhl-game-data](https://www.kaggle.com/datasets/martinellis/nhl-game-data))
 * E-Sports data ([https://www.kaggle.com/devinanzelmo/dota-2-matches](https://www.kaggle.com/devinanzelmo/dota-2-matches) or [http://aligulac.com/about/db/](http://aligulac.com/about/db/))
 
-## Cluster Environment Notes (To Be Updated in April)
+## Cluster Environment Notes
 
 ### Connect to AWS EMR Cluster
 
-> The AWS EMR clusters for project are available from April 14 to May 4
+> The AWS EMR clusters for project are available from April 15 to May 4
 >
 > Details of the cluster will be updated once the clusters are created
 
