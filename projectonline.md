@@ -65,7 +65,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Connect to AWS EMR Cluster
 
-> The AWS EMR clusters for project are available from June 24 to July 7
+> The AWS EMR clusters for project are available from June 23 to July 6
 >
 > Details of the cluster will be updated once the clusters are created
 
@@ -117,17 +117,17 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * For deployment on the cluster, you are recommended to AWS S3; it is a common practice for data storage when using AWS.
 
-* Our S3 bucket on cluster is `s3://msbx-5420`
+* Our S3 bucket on cluster is `s3://msbx5420-2025`
 
 * To check files and copy files to S3 bucket, you can use the following commands (make sure you have created your team directory on master node and uploaded your files there)
 
   ```bash
-  aws s3 ls s3://msbx-5420
-  aws s3 ls s3://msbx-5420/projects/{user_directory}/
+  aws s3 ls s3://msbx5420-2025
+  aws s3 ls s3://msbx5420-2025/projects/{user_directory}/
   #copy single file, the last / is required
-  aws s3 cp /mnt1/msbx5420_projects/{user_directory}/{file.name} s3://msbx-5420/projects/{user_directory}/
+  aws s3 cp /mnt1/msbx5420_projects/{user_directory}/{file.name} s3://msbx5420-2025/projects/{user_directory}/
   #copy the entire directory
-  aws s3 cp /mnt1/msbx5420_projects/{user_directory} s3://msbx-5420/projects/{user_directory} --recursive
+  aws s3 cp /mnt1/msbx5420_projects/{user_directory} s3://msbx5420-2025/projects/{user_directory} --recursive
   ```
 
 * In your Python notebook on JupyterHub, save or read data on S3 bucket with S3 path `s3://msbx-5420/projects/{user_directory}/{file.name}`
