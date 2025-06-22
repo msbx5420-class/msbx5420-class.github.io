@@ -65,13 +65,12 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Connect to AWS EMR Cluster
 
-> The AWS EMR clusters for project are available from June 23 to July 6
+> The AWS EMR cluster for project is available from June 23 to July 6
 >
-> Details of the cluster will be updated once the clusters are created
 
 * Leeds AWS EMR Cluster: Leeds Technology Service has supported for the creation of a series of AWS clusters for the project. 
 
-* Host address is: *ec2-34-221-132-115.us-west-2.compute.amazonaws.com*
+* Host address is: *ec2-35-85-146-137.us-west-2.compute.amazonaws.com*
 
 * Private key file is same with the cluster in lab session: `MSBX5420.pem` 
 
@@ -84,8 +83,8 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420.pem` inside your current directory with correct permission; `sudo chmod 600 MSBX5420.pem` on Mac if necessary)
 
   ```bash
-  ssh -i MSBX5420.pem hadoop@ec2-34-221-132-115.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420.pem {your_file} hadoop@ec2-34-221-132-115.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_projects/{user_directory}
+  ssh -i MSBX5420.pem hadoop@ec2-35-85-146-137.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420.pem {your_file} hadoop@ec2-35-85-146-137.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_projects/{user_directory}
   ```
 
 ### Use Jupyter Notebook on Cluster
@@ -100,7 +99,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Use ssh port forwarding to connect to JupyterHub
 
   ```bash
-  ssh -i MSBX5420.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-34-221-132-115.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-35-85-146-137.us-west-2.compute.amazonaws.com
   ```
   
 * Go to `https://localhost:8080` in browser and login with your team username and password; then create or upload your notebooks.
