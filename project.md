@@ -1,18 +1,18 @@
 # MSBX 5420 Group Project
 
-The objective of this group project is to use what we learned in this course to solve some interesting and important problems. I will encourage you to define what is interesting and important from your business perspective. Team members may have different expertise: if you are strong with business - try to contribute from a business perspective, if you are strong in coding - try to contribute to coding. Teams are self-formed with 4-5 members. Anyone without a team will be randomly assigned into teams. Team information will be finalized by the end of March 9.
+The objective of this group project is to use what we learned in this course to solve some interesting and important problems. I will encourage you to define what is interesting and important from your business perspective. Team members may have different expertise: if you are strong with business - try to contribute from a business perspective; if you are strong in coding - try to contribute to coding. Teams are self-formed with 4-5 members. Anyone without a team will be randomly assigned into teams. Team information will be finalized by the end of March 1.
 
 ## Project Requirements
 
 ### Basic Requirements
 
-* Dataset: You can use any dataset in the project. However, your data should have substantial size. This is a big data course so datasets below <u>10MB</u> are not allowed. Any dataset is possible, although some recommendations of datasets are provided in case you don't know what data to use. You can also collect your own data if you would like. If you are really interested in a data source but it requires additional data collection efforts, please discuss with the instructor for solutions.
+* Dataset: You can use any dataset in the project. However, your data should have substantial size. This is a big data course so datasets below <u>10MB</u> are not allowed. Any dataset is possible, although some recommendations of datasets are provided in case you don't know what data to use. You can also collect your own data if you would like. If you are really interested in a data source but it requires additional data collection effort, please discuss with the instructor for solutions.
 * Environment: You can use Docker to develop and test your code. In the end, you are required to use AWS EMR cluster to run your analysis.
 * Programming Language: You can use any type of programming languages or business analytics tools, but must include the use of Spark with Python (PySpark), which needs to be deployed on the cluster; that is, if you need to implement a specific feature but it is not available in Spark, you have the flexibility to justify it and use other tools, but meanwhile you still need to make sure you have something implemented by PySpark in that case. Only with PySpark, your implementation shows the potential of horizontal scaling on the AWS EMR cluster.
 
 ### Functional Requirements
 
-* Data Ingestion: You can read local files when developing your code locally, but when deploying your code on AWS cluster, you need to save your dataset into AWS S3. Then read data from AWS S3 to do analysis on the AWS cluster. Typically S3 is more convenient in this project because the data in S3 can be shared across clusters. It is optional, but useful if you save your data as parquet files in AWS S3 (you can save other type of data as parquet file either through Pandas or PySpark).
+* Data Ingestion: You can read local files when developing your code locally, but when deploying your code on AWS cluster, you need to save your dataset into Amazon S3. Then read data from Amazon S3 to run your analysis on the AWS cluster. S3 is a convenient data storage place for this project because the data in S3 can be shared across clusters. It is optional, but useful if you save your data as partitioned parquet files in S3 (you can save other type of data as parquet file either through Pandas or PySpark).
 * Obtain statistics and perform analysis of the ingested dataset (with PySpark or other packages if necessary) and display your insights (use Jupyter notebook or other type of visualization).
 
 ### Performance Requirements
@@ -22,31 +22,31 @@ The objective of this group project is to use what we learned in this course to 
 
 ### About ChatGPT
 
-* ChatGPT or generative AI tools have been useful for writing reports, but there have been discussions around whether they should be allowed for classrooms. In this course, you are allowed to use ChatGPT or AI tools for writing reports if they can generate the content you want. But the condition is that you need to clearly state that you use ChatGPT or other AI tools in writing the report.
+* ChatGPT or generative AI tools have been useful for writing reports. In this course, you are allowed to use ChatGPT or AI tools for writing reports if they can generate the content you want. But please clearly state that you use ChatGPT or other AI tools in writing the report.
 * Note that the use of ChatGPT or AI tools in writing report will NOT affect any grading of your project report, as long as you indicate which tool you use. However, it may take adverse effect on your grading if your report is very likely written by AI but you don't state the use of AI in the report.
 
 ## Project Timeline and Deliverable
 
 > For all project deliverables, they should be submitted on Canvas by one of the team members
 
-* ***<u>Project Proposal (Due Apr 2):</u>*** You will need to develop a <u>one-page proposal</u> of your project (the second page will not be graded), to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. Submit your project proposal <u>one day before your consultation time</u>. Note that the proposal is only a summary of your plan and progress, your actual progress doesn't have to be constrained by it. 
-* ***<u>Project Consultation (Week 12 Apr 3/4):</u>*** Your team will make an appointment (30 mins) with instructor by choosing your time slots (which will be confirmed in around Spring break). You will discuss your project with instructor, demonstrate your preliminary works, and get feedback on solving the problems. It is recommended that all team members join the consultation to demonstrate you are working as a whole team. No-show in consultation without reasons will affect participation grade.
-* ***<u>Project Presentation (Week 15 Apr 24/25):</u>*** You will present your problem and analysis (insights) in the class. Your presentation date (April 24 or 25) will be determined by the section of the majority of team members. You are required to do in-person presentation, if possible; only if you have special constraints or you are distance education students, you can do pre-recorded videos for presentation. Submit your presentation slides (and pre-recorded videos, if applicable) on the same day of your presentation. The order of presentation will be decided by lucky draw. 
+* ***<u>Project Proposal (Submit before Consultation):</u>*** You will need to develop a <u>one-page proposal</u> of your project (the second page will not be graded), to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. Submit your project proposal <u>one day before your consultation time</u>. Note that the proposal is only a summary of your plan and progress, your actual progress doesn't have to be constrained by it. 
+* ***<u>Project Consultation (Week 12 March 24/26):</u>*** Your team will make an appointment (30 mins) with instructor by choosing your time slots (which will be confirmed in around Spring break). You will discuss your project with instructor, demonstrate your preliminary works, and get feedback on solving the problems. It is recommended that all team members join the consultation to demonstrate you are working as a whole team. No-show in consultation without reasons will affect participation grade.
+* ***<u>Project Presentation (Week 15 April 14/16):</u>*** You will present your problem and analysis (insights) in the class. Your presentation date (April 14 or 16) will be determined by the section of the majority of team members. You are required to do in-person presentation, if possible; only if you have special constraints or you are distance education students, you can do pre-recorded videos for presentation. Submit your presentation slides (and pre-recorded videos, if applicable) on Canvas before your presentation. The order of presentation will be decided by lucky draw. 
   * **Presentation schedule and format requirement**
     * All group members from in-person sections (001/002): in-person presentation only; date depends on the section of the majority of group members; group members who have unresolvable conflicts can record videos which are played by other members who present in-person
     * Most group members from in-person sections with some members from online section: members from online section can record videos and members who present in-person can play the video part from online members
     * Most group members or all group members from online section (800): recorded video presentations submitted on Canvas
 
-* ***<u>Project Implementation (Due May 2):</u>*** You will refine your project after presentation and submit your final application (code, data, etc.) in the project as the deliverable of implementation.
-* ***<u>Project Report (Due May 2):</u>*** Based on your problems and insights, you will write a project report to motivate your problem, describe the dataset you use, present your findings and discuss the implications of your findings.
+* ***<u>Project Implementation (Due April 24):</u>*** You will refine your project after presentation and submit your final application (code, data, etc.) in the project as the deliverable of implementation.
+* ***<u>Project Report (Due April 24):</u>*** Based on your problems and insights, you will write a project report to motivate your problem, describe the dataset you use, present your findings and discuss the implications of your findings.
 
 ## Project Grading (40% in total)
 
 > Grades on Canvas will be 10 pts, 20 pts, 40 pts and 30 pts for each of the component, respectively. Then the total (100 pts) will be converted as 40% of final grade.
 
 * ***<u>Project Proposal (4%):</u>*** Please be concise on your proposal within one-page. <u>Contents exceeding one-page will not be graded.</u>
-* ***<u>Project Presentation (8%):</u>*** Presentation will be 13-16 mins for each group. Make sure your presentation length fall into the range. For either in-person or pre-recorded presentation, make sure all of your team members have engagement in the presentation.
-* ***<u>Project Implementation (16%):</u>*** Your implementation (analysis and code) will take 10%, while the deployment of your application (pyspark) on the cluster will take 6%.
+* ***<u>Project Presentation (8%):</u>*** Presentation will be 12-15 mins for each group. Make sure your presentation length fall into the range. For either in-person or pre-recorded presentation, make sure all of your team members have engagement in the presentation.
+* ***<u>Project Implementation (16%):</u>*** Your implementation (analysis and code) will take 10%, while the deployment of your application (pyspark) on the AWS EMR cluster will take 6%.
 * ***<u>Project Report (12%):</u>*** The final report has no page limits (typically 10-15 pages would be sufficient). There is not standard rubric for the report, but your report should discuss your processes or insights rather than displaying your code. For a reference, your final report can include the following components: 
   * Abstract / summary of your report
   * The background and motivation of your questions
@@ -69,11 +69,11 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Sports data ([https://www.kaggle.com/datasets/hugomathien/soccer](https://www.kaggle.com/datasets/hugomathien/soccer) or [https://www.kaggle.com/datasets/martinellis/nhl-game-data](https://www.kaggle.com/datasets/martinellis/nhl-game-data))
 * E-Sports data ([https://www.kaggle.com/devinanzelmo/dota-2-matches](https://www.kaggle.com/devinanzelmo/dota-2-matches) or [http://aligulac.com/about/db/](http://aligulac.com/about/db/))
 
-## Cluster Environment Notes
+## Cluster Environment Notes (To Be Updated)
 
 ### Connect to AWS EMR Cluster
 
-> The AWS EMR clusters for project are available from April 15 to May 4
+> The AWS EMR clusters for project are available from March 30 to April 26
 >
 
 * Leeds AWS EMR Cluster: Leeds Technology Service has supported for the creation of a series of AWS clusters for the project. 
