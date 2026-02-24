@@ -73,7 +73,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Connect to AWS EMR Cluster
 
-> The AWS EMR clusters for project are available from March 30 to April 26
+> The AWS EMR clusters for project are available from April 6 to April 26 (three weeks); the clusters will be much larger than the cluster used for lab exercises
 >
 
 * Leeds AWS EMR Cluster: Leeds Technology Service has supported for the creation of a series of AWS clusters for the project. 
@@ -89,22 +89,47 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * All personal directories (if needed) are under `/mnt1/msbx5420` and all team directories are under `/mnt1/msbx5420_teams`
 
-* Please follow the rules to use cluster and create directories. Do not to use the directories under entry directory when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under entry directory will be migrated to `/mnt1/msbx5420_teams`. If you have very large data files and have troubles of uploading them to the cluster, please let the instructor know to help you upload the data.
+* Please follow the rules to use cluster and create directories. Do not to make or use directories under entry directory when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under entry directory will be migrated to `/mnt1/msbx5420_teams`. <u>If you have very large data files and have troubles of uploading them to the cluster, please let the instructor know to help you upload the data.</u>
 
-* Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420.pem` inside your current directory with correct permission; `sudo chmod 600 MSBX5420.pem` on Mac if necessary)
+* Commands to access cluster and copy file from laptop/PC to cluster (make sure your `MSBX5420.pem` is inside your current directory with correct permission; `sudo chmod 600 MSBX5420.pem` on MacOS if necessary)
 
   ```bash
   #cluster 1
   ssh -i MSBX5420.pem hadoop@ec2-52-32-236-168.us-west-2.compute.amazonaws.com
   scp -i MSBX5420.pem {your_file} hadoop@ec2-52-32-236-168.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
+  scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-52-32-236-168.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
   #cluster 2
   ssh -i MSBX5420.pem hadoop@ec2-34-221-98-70.us-west-2.compute.amazonaws.com
   scp -i MSBX5420.pem {your_file} hadoop@ec2-34-221-98-70.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
+  scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-34-221-98-70.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
   ```
 
 > If the cluster you are using is crowded and hard to get access, you can use the other cluster; but still, make sure your code has been tested locally with Docker first.
 
-* All clusters share the same AWS S3 bucket; if you read data from S3, you don't need to do additional steps
+* All clusters share the same AWS S3 bucket (`s3://msbx5420-2026`)
+
+### Use AWS S3 Bucket on Cluster
+
+* For deployment on the cluster, please upload your data to Amazon S3; it is a common practice for data storage when using AWS, and it allows your data accessible across clusters
+
+* Our S3 bucket on cluster is `s3://msbx5420-2026`
+
+* Data stored in S3 can be shared across clusters, so when you switch cluster, S3 can be very convenient. That is, S3 doesn't rely on the cluster, so if there is any issue on the cluster, what you save on S3 won't lose.
+
+* To check files and copy files to S3 bucket, you can use the following commands <u>on the master node</u> (make sure you have created your team directory on master node and uploaded your files there)
+
+  ```bash
+  cd /mnt1/msbx5420_teams/{team_directory}
+  aws s3 ls s3://msbx5420-2026
+  aws s3 ls s3://msbx5420-2026/teams/{team_directory}/
+  #copy single file, the last / is required
+  aws s3 cp {your_file} s3://msbx5420-2026/teams/{team_directory}/
+  #copy the entire directory
+  aws s3 cp {your_folder} s3://msbx5420-2026/teams/{team_directory}/{your_folder} --recursive
+  ```
+
+* Try to clean up your files on the master node after you put them to S3
+* <u>If your dataset is super large, please let the instructor know to help your upload the data</u>
 
 ### Use Jupyter Notebook on Cluster
 
@@ -130,32 +155,9 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * To run PySpark program, use the kernel `PySpark` for notebook; you can use sparkmagic with `sc.install_pypi_package()` to make additional packages effective within the notebook. If you need additional python packages on the Python 3 kernel, let the instructor know as early as possible. **Please do not install packages yourself directly on the cluster using pip**.
 
-* In the notebook, you can use sparkmagic to configure your application in terms of resource use; please follow the Wikipedia example to apply it.
+* In the notebook, you can use sparkmagic to configure your notebook; please follow the `sparkmagic.ipynb` to use sparkmagic and enforce correct configuration.
 
 * Please avoid uploading data files in JupyterHub. The data files you upload to JupyterHub workspace cannot be loaded by PySpark kernel and running analysis directly from the data file in the workspace will easily overload the master node.
 
-### Use AWS S3 Bucket on Cluster
-
-* For deployment on the cluster, you are recommended to AWS S3; it is a common practice for data storage when using AWS, and it allows your data accessible across clusters
-
-* Our S3 bucket on cluster is `s3://msbx5420-2025`
-
-* Data stored in S3 can be shared across clusters, so when you switch cluster, S3 can be very convenient. That is, S3 doesn't rely on the cluster, so if there is any issue on the cluster, what you save on S3 won't lose.
-
-* To check files and copy files to S3 bucket, you can use the following commands (make sure you have created your team directory on master node and uploaded your files there)
-
-  ```bash
-  aws s3 ls s3://msbx5420-2025
-  aws s3 ls s3://msbx5420-2025/teams/{team_directory}/
-  #copy single file, the last / is required
-  aws s3 cp /mnt1/msbx5420_teams/{team_directory}/{file.name} s3://msbx5420-2025/teams/{team_directory}/
-  #copy the entire directory
-  aws s3 cp /mnt1/msbx5420_teams/{team_directory} s3://msbx5420-2025/teams/{team_directory} --recursive
-  ```
-
-* In your Python notebook on JupyterHub, save or read data on S3 bucket with S3 path `s3://msbx5420-2025/teams/{team_directory}/{file.name}`
-
-* Try to clean up your files on the master node after you put them to S3
-
-* If your dataset is super large, please let the instructor know to help your upload the data
+* In your Python notebook on JupyterHub, save or read data on with S3 path such as `s3://msbx5420-2026/teams/{team_directory}/{your_file}` or `s3://msbx5420-2026/teams/{team_directory}/{your_folder}/{your_file}`
 
