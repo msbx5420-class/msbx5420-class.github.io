@@ -1,6 +1,6 @@
 # MSBX 5420 Group Project
 
-The objective of this group project is to use what we learned in this course to solve some interesting and important problems. I will encourage you to define what is interesting and important from your business perspective. Team members may have different expertise: if you are strong with business - try to contribute from a business perspective; if you are strong in coding - try to contribute to coding. Teams are self-formed with 4-5 members. Anyone without a team will be randomly assigned into teams. Team information will be finalized by the end of March 1.
+The objective of this group project is to use what we learned in this course to solve some interesting and important problems. I will encourage you to define what is interesting and important from your business perspective. Team members may have different expertise: if you are strong with business - try to contribute from a business perspective; if you are strong in coding - try to contribute to coding. Teams are self-formed with 4-5 members. Anyone without a team will be randomly assigned into teams. Team information will be finalized by the end of March 6.
 
 ## Project Requirements
 
@@ -77,6 +77,8 @@ You can use any dataset you want for this project. In case you have troubles in 
 >
 
 * Leeds AWS EMR Cluster: Leeds Technology Service has supported for the creation of a series of AWS clusters for the project. 
+
+* **Important: if you find the cluster down (for any reasons), please contact instructor rather than trying to fix yourself.**
 
 * Host addresses are:
 
