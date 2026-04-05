@@ -80,6 +80,8 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * **Important: if you find the cluster down (for any reasons), please contact instructor rather than trying to fix yourself.**
 
+* **Important: the notes here only provide the essential commands, please refer to lab 7 tutorial / week 9 slides for details.**
+
 * Host addresses are:
 
   * cluster 1: *ec2-52-32-236-168.us-west-2.compute.amazonaws.com*
@@ -93,7 +95,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Please follow the rules to use cluster and create directories. Do not to make or use directories under entry directory when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under entry directory will be migrated to `/mnt1/msbx5420_teams`. <u>If you have very large data files and have troubles of uploading them to the cluster, please let the instructor know to help you upload the data.</u>
 
-* Commands to access cluster and copy file from laptop/PC to cluster (make sure your `MSBX5420.pem` is inside your current directory with correct permission; `sudo chmod 600 MSBX5420.pem` on MacOS if necessary)
+* Commands to access cluster and copy file from laptop/PC to cluster (make sure your `MSBX5420.pem` is inside your current directory with correct permission; or `cd` to the directory where you have `MSBX5420.pem`; make sure it is under `C:/Users/username` on Windows or run `sudo chmod 600 MSBX5420.pem` on MacOS if necessary)
 
   ```bash
   #cluster 1
@@ -142,7 +144,7 @@ You can use any dataset you want for this project. In case you have troubles in 
   sudo docker exec jupyterhub bash -c "echo {username}:{password} | chpasswd"
   ```
   
-* Use ssh port forwarding to connect to JupyterHub
+* On your laptop/PC, use ssh port forwarding to connect to JupyterHub
 
   ```bash
   #cluster 1
@@ -155,11 +157,11 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * When you see security warning, click "Advanced" or "Details" to continue and bypass it. If you do not find "Advanced" or "Details", blindly type `thisisunsafe` in the page and press `enter` to bypass it.
 
-* To run PySpark program, use the kernel `PySpark` for notebook; you can use sparkmagic with `sc.install_pypi_package()` to make additional packages effective within the notebook. If you need additional python packages on the Python 3 kernel, let the instructor know as early as possible. **Please do not install packages yourself directly on the cluster using pip**.
+* To run PySpark program, use the kernel `PySpark` for notebook and start the notebook with sparkmagic configuration; you can use sparkmagic with `sc.install_pypi_package()` to make additional packages effective within the notebook. If you need additional python packages, let the instructor know as early as possible. **Please do not install packages yourself directly on the cluster using pip**.
 
 * In the notebook, you can use sparkmagic to configure your notebook; please follow the `sparkmagic.ipynb` to use sparkmagic and enforce correct configuration.
 
-* Please avoid uploading data files in JupyterHub. The data files you upload to JupyterHub workspace cannot be loaded by PySpark kernel and running analysis directly from the data file in the workspace will easily overload the master node.
+* Please avoid uploading data files in JupyterHub workspace. The data files you upload to JupyterHub workspace cannot be loaded by PySpark kernel and running analysis directly from the data file in the workspace will easily overload the master node.
 
 * In your Python notebook on JupyterHub, save or read data on with S3 path such as `s3://msbx5420-2026/teams/{team_directory}/{your_file}` or `s3://msbx5420-2026/teams/{team_directory}/{your_folder}/{your_file}`
 
