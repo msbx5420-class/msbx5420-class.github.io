@@ -101,9 +101,9 @@ You can use any dataset you want for this project. In case you have troubles in 
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420.pem hadoop@ec2-35-87-137-104.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420.pem {your_file} hadoop@ec2-35-87-137-104.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
-  scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-35-87-137-104.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
+  ssh -i MSBX5420.pem hadoop@ec2-34-209-58-208.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420.pem {your_file} hadoop@ec2-34-209-58-208.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
+  scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-34-209-58-208.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
   #cluster 2
   ssh -i MSBX5420.pem hadoop@ec2-34-221-98-70.us-west-2.compute.amazonaws.com
   scp -i MSBX5420.pem {your_file} hadoop@ec2-34-221-98-70.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
@@ -150,7 +150,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-35-87-137-104.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-34-209-58-208.us-west-2.compute.amazonaws.com
   #cluster 2
   ssh -i MSBX5420.pem -N -L localhost:8081:localhost:9443 hadoop@ec2-34-221-98-70.us-west-2.compute.amazonaws.com
   ```
