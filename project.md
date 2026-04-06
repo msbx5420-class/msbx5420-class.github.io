@@ -80,14 +80,14 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * **Important: if you find the cluster down (for any reasons), please contact instructor rather than trying to fix yourself.**
 
-* **Important: the notes here only provide the essential commands, please refer to lab 7 tutorial / week 9 slides for details.**
+* **Important: the notes here only provide the essential commands, please refer to Lab 7 tutorial / Week 9 lecture slides for a complete workflow.**
 
 * Host addresses are:
 
   * cluster 1: *ec2-52-32-236-168.us-west-2.compute.amazonaws.com*
   * cluster 2: *ec2-34-221-98-70.us-west-2.compute.amazonaws.com*
 
-* Private key file is same with the first cluster - `MSBX5420.pem` 
+* Private key file is same with the first cluster (Lab 7) - `MSBX5420.pem` 
 
 * For any cluster, create your team directory under absolute path `/mnt1/msbx5420_teams` first and then copy your files to your team directory with `scp`
 
@@ -95,13 +95,15 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Please follow the rules to use cluster and create directories. Do not to make or use directories under entry directory when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under entry directory will be migrated to `/mnt1/msbx5420_teams`. <u>If you have very large data files and have troubles of uploading them to the cluster, please let the instructor know to help you upload the data.</u>
 
-* Commands to access cluster and copy file from laptop/PC to cluster (make sure your `MSBX5420.pem` is inside your current directory with correct permission; or `cd` to the directory where you have `MSBX5420.pem`; make sure it is under `C:/Users/username` on Windows or run `sudo chmod 600 MSBX5420.pem` on MacOS if necessary)
+* Before using the commends, first `cd` to the directory where you have `MSBX5420.pem`; make sure it is under `C:/Users/username` on Windows or run `sudo chmod 600 MSBX5420.pem` on MacOS if necessary; make sure your data is under the same directory with the key file to best use the commands.
+
+* Commands to access cluster and copy file from laptop/PC to cluster
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420.pem hadoop@ec2-52-32-236-168.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420.pem {your_file} hadoop@ec2-52-32-236-168.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
-  scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-52-32-236-168.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
+  ssh -i MSBX5420.pem hadoop@ec2-35-87-137-104.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420.pem {your_file} hadoop@ec2-35-87-137-104.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
+  scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-35-87-137-104.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
   #cluster 2
   ssh -i MSBX5420.pem hadoop@ec2-34-221-98-70.us-west-2.compute.amazonaws.com
   scp -i MSBX5420.pem {your_file} hadoop@ec2-34-221-98-70.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
@@ -148,7 +150,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-52-32-236-168.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-35-87-137-104.us-west-2.compute.amazonaws.com
   #cluster 2
   ssh -i MSBX5420.pem -N -L localhost:8081:localhost:9443 hadoop@ec2-34-221-98-70.us-west-2.compute.amazonaws.com
   ```
