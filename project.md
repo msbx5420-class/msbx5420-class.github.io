@@ -84,8 +84,8 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Host addresses are:
 
-  * cluster 1: *ec2-52-32-236-168.us-west-2.compute.amazonaws.com*
-  * cluster 2: *ec2-34-221-98-70.us-west-2.compute.amazonaws.com*
+  * cluster 1: *ec2-54-202-219-129.us-west-2.compute.amazonaws.com*
+  * cluster 2: *ec2-34-222-233-89.us-west-2.compute.amazonaws.com*
 
 * Private key file is same with the first cluster (Lab 7) - `MSBX5420.pem` 
 
@@ -101,13 +101,13 @@ You can use any dataset you want for this project. In case you have troubles in 
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420.pem hadoop@ec2-35-91-203-239.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420.pem {your_file} hadoop@ec2-35-91-203-239.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
-  scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-35-91-203-239.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
+  ssh -i MSBX5420.pem hadoop@ec2-54-202-219-129.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420.pem {your_file} hadoop@ec2-54-202-219-129.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
+  scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-54-202-219-129.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
   #cluster 2
-  ssh -i MSBX5420.pem hadoop@ec2-34-221-98-70.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420.pem {your_file} hadoop@ec2-34-221-98-70.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
-  scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-34-221-98-70.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
+  ssh -i MSBX5420.pem hadoop@ec2-34-222-233-89.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420.pem {your_file} hadoop@ec2-34-222-233-89.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
+  scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-34-222-233-89.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
   ```
 
 > If the cluster you are using is crowded and hard to get access, you can use the other cluster; but still, make sure your code has been tested locally with Docker first.
@@ -118,7 +118,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * For deployment on the cluster, please upload your data to Amazon S3; it is a common practice for data storage when using AWS, and it allows your data accessible across clusters
 
-* Our S3 bucket on cluster is `s3://msbx5420-2026`
+* Our S3 bucket for the class is `s3://msbx5420-2026`
 
 * Data stored in S3 can be shared across clusters, so when you switch cluster, S3 can be very convenient. That is, S3 doesn't rely on the cluster, so if there is any issue on the cluster, what you save on S3 won't lose.
 
@@ -139,7 +139,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Use Jupyter Notebook on Cluster
 
-* Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>. *<u>If you use multiple clusters for JupyterHub, please make sure you have the same username across the clusters.</u>* This will make all your users in different clusters share the notebooks.
+* Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>. 
 
   ```bash
   sudo docker exec jupyterhub useradd -m -s /bin/bash -N {username}
@@ -150,9 +150,9 @@ You can use any dataset you want for this project. In case you have troubles in 
 
   ```bash
   #cluster 1
-  ssh -i MSBX5420.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-35-91-203-239.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-54-202-219-129.us-west-2.compute.amazonaws.com
   #cluster 2
-  ssh -i MSBX5420.pem -N -L localhost:8081:localhost:9443 hadoop@ec2-34-221-98-70.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420.pem -N -L localhost:8081:localhost:9443 hadoop@ec2-34-222-233-89.us-west-2.compute.amazonaws.com
   ```
   
 * Go to `https://localhost:8080` (cluster 1), or `https://localhost:8081` (cluster 2) in browser and login with your team username and password; then create or upload your notebooks.
