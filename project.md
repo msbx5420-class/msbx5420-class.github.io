@@ -85,7 +85,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Host addresses are:
 
   * cluster 1: *ec2-54-202-219-129.us-west-2.compute.amazonaws.com*
-  * cluster 2: *ec2-52-26-16-113.us-west-2.compute.amazonaws.com*
+  * cluster 2: *ec2-54-245-7-173.us-west-2.compute.amazonaws.com*
 
 * Private key file is same with the first cluster (Lab 7) - `MSBX5420.pem` 
 
@@ -105,9 +105,9 @@ You can use any dataset you want for this project. In case you have troubles in 
   scp -i MSBX5420.pem {your_file} hadoop@ec2-54-202-219-129.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
   scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-54-202-219-129.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
   #cluster 2
-  ssh -i MSBX5420.pem hadoop@ec2-52-26-16-113.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420.pem {your_file} hadoop@ec2-52-26-16-113.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
-  scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-52-26-16-113.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
+  ssh -i MSBX5420.pem hadoop@ec2-54-245-7-173.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420.pem {your_file} hadoop@ec2-54-245-7-173.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
+  scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-54-245-7-173.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_teams/{team_directory}
   ```
 
 > If the cluster you are using is crowded and hard to get access, you can use the other cluster; but still, make sure your code has been tested locally with Docker first.
@@ -152,7 +152,7 @@ You can use any dataset you want for this project. In case you have troubles in 
   #cluster 1
   ssh -i MSBX5420.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-54-202-219-129.us-west-2.compute.amazonaws.com
   #cluster 2
-  ssh -i MSBX5420.pem -N -L localhost:8081:localhost:9443 hadoop@ec2-52-26-16-113.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420.pem -N -L localhost:8081:localhost:9443 hadoop@ec2-54-245-7-173.us-west-2.compute.amazonaws.com
   ```
   
 * Go to `https://localhost:8080` (cluster 1), or `https://localhost:8081` (cluster 2) in browser and login with your team username and password; then create or upload your notebooks.
