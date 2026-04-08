@@ -85,7 +85,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Host addresses are:
 
   * cluster 1: *ec2-54-202-219-129.us-west-2.compute.amazonaws.com*
-  * cluster 2: *ec2-34-222-233-89.us-west-2.compute.amazonaws.com*
+  * cluster 2: *ec2-44-255-121-100.us-west-2.compute.amazonaws.com*
 
 * Private key file is same with the first cluster (Lab 7) - `MSBX5420.pem` 
 
