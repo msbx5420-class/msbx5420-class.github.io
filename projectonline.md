@@ -12,7 +12,7 @@ The objective of this project is to use what we learned in this course to solve 
 
 ### Functional Requirements
 
-* Data Ingestion: You can read local files when developing your code locally, but when deploying your code on AWS cluster, you need to save your dataset into AWS S3. Then read data from AWS S3 to do analysis on the AWS cluster. It is optional, but useful if you save your data as parquet files in AWS S3 (you can save other type of data as parquet file either through Pandas or PySpark).
+* Data Ingestion: You can read local files when developing your code locally, but when deploying your code on AWS cluster, you need to save your dataset into Amazon S3. Then read data from Amazon S3 to run your analysis on the AWS cluster. S3 is a convenient data storage place for this project because the data in S3 can be shared across clusters. It is optional, but useful if you save your data as partitioned parquet files in S3 (you can save other type of data as parquet file either through Pandas or PySpark).
 * Obtain statistics and perform analysis of the ingested dataset (with PySpark or other packages if necessary) and display your insights (use Jupyter notebook or other type of visualization).
 
 ### Performance Requirements
@@ -22,7 +22,7 @@ The objective of this project is to use what we learned in this course to solve 
 
 ### About ChatGPT
 
-* ChatGPT or generative AI tools such as GPT3 have been useful for writing reports, but there have been discussions around whether they should be allowed for classrooms. In this course, you are allowed to use ChatGPT or AI tools for writing reports if they can generate the content you want. But the condition is that you need to clearly state that you use ChatGPT or other AI tools in writing the report.
+* ChatGPT or generative AI tools have been useful for writing reports. In this course, you are allowed to use ChatGPT or AI tools for writing reports if they can generate the content you want. But please clearly state that you use ChatGPT or other AI tools in writing the report.
 * Note that the use of ChatGPT or AI tools in writing report will NOT affect any grading of your project report, as long as you indicate which tool you use. However, it may take adverse effect on your grading if your report is very likely written by AI but you don't state the use of AI in the report.
 
 ## Project Timeline and Deliverable
@@ -65,10 +65,10 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Connect to AWS EMR Cluster
 
-> The AWS EMR cluster for project is available from June 23 to July 6
+> The AWS EMR cluster for project is available from June 22 to July 5
 >
 
-* Leeds AWS EMR Cluster: Leeds Technology Service has supported for the creation of a series of AWS clusters for the project. 
+* Leeds AWS EMR Cluster: Leeds Technology Service has supported for the creation of AWS EMR cluster for the project. 
 
 * Host address is: *ec2-35-85-146-137.us-west-2.compute.amazonaws.com*
 
@@ -78,14 +78,39 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * All personal directories (if needed) are under `/mnt1/msbx5420_exercises` and all team directories are under `/mnt1/msbx5420_projects`
 
-* Please follow the rules to use cluster and create directories. Do not to use the directories under entry directory when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under entry directory will be migrated to `/mnt1/msbx5420_projects`. If you have very large data files and have troubles of uploading them to the cluster, please let the instructor know to help you upload the data.
+* Please follow the rules to use cluster and create directories. Do not to use the directories under entry directory when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under entry directory will be migrated to `/mnt1/msbx5420_projects`. <u>If you have very large data files and have troubles of uploading them to the cluster, please let the instructor know to help you upload the data.</u>
 
-* Commands to access cluster and copy file from laptop to cluster (make sure your `MSBX5420.pem` inside your current directory with correct permission; `sudo chmod 600 MSBX5420.pem` on Mac if necessary)
+* Before using the commends, first `cd` to the directory where you have `MSBX5420.pem`; make sure it is under `C:/Users/username` on Windows or run `sudo chmod 600 MSBX5420.pem` on MacOS if necessary; make sure your data is under the same directory with the key file to best use the commands.
+
+* Commands to access cluster and copy file from laptop/PC to cluster
 
   ```bash
   ssh -i MSBX5420.pem hadoop@ec2-35-85-146-137.us-west-2.compute.amazonaws.com
   scp -i MSBX5420.pem {your_file} hadoop@ec2-35-85-146-137.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_projects/{user_directory}
+  scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-35-85-146-137.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_projects/{user_directory}
   ```
+
+### Use AWS S3 Bucket on Cluster
+
+* For deployment on the cluster, please upload your data to Amazon S3; it is a common practice for data storage when using AWS, and it allows your data accessible across clusters
+
+* Our S3 bucket on cluster is `s3://msbx5420-2026`
+
+* To check files and copy files to S3 bucket, you can use the following commands <u>on the master node</u> (make sure you have created your team directory on master node and uploaded your files there)
+
+  ```bash
+  cd /mnt1/msbx5420_projects/{user_directory}
+  aws s3 ls s3://msbx5420-2026/
+  aws s3 ls s3://msbx5420-2026/projects/{user_directory}/
+  #copy single file, the last / is required
+  aws s3 cp {your_file} s3://msbx5420-2025/projects/{user_directory}/
+  #copy the entire directory
+  aws s3 cp {your_folder} s3://msbx5420-2026/projects/{user_directory} --recursive
+  ```
+
+* Try to clean up your files on the master node after you put them to S3
+
+* <u>If your dataset is super large, please let the instructor know to help your upload the data</u>
 
 ### Use Jupyter Notebook on Cluster
 
@@ -95,41 +120,21 @@ You can use any dataset you want for this project. In case you have troubles in 
   sudo docker exec jupyterhub useradd -m -s /bin/bash -N {username}
   sudo docker exec jupyterhub bash -c "echo {username}:{password} | chpasswd"
   ```
-  
-* Use ssh port forwarding to connect to JupyterHub
+
+* On your laptop/PC, use ssh port forwarding to connect to JupyterHub
 
   ```bash
   ssh -i MSBX5420.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-35-85-146-137.us-west-2.compute.amazonaws.com
   ```
-  
+
 * Go to `https://localhost:8080` in browser and login with your team username and password; then create or upload your notebooks.
 
 * When you see security warning, click "Advanced" or "Details" to continue and bypass it. If you do not find "Advanced" or "Details", blindly type `thisisunsafe` in the page and press `enter` to bypass it.
 
-* To run PySpark program, use the kernel `PySpark` for notebook; you can use sparkmagic with `sc.install_pypi_package()` to make additional packages effective within the notebook. **Please do not install packages yourself directly on the cluster using pip**.
+* To run PySpark program, use the kernel `PySpark` for notebook and start the notebook with sparkmagic configuration; you can use sparkmagic with `sc.install_pypi_package()` to make additional packages effective within the notebook. If you need additional python packages, let the instructor know as early as possible. **Please do not install packages yourself directly on the cluster using pip**.
 
-* In the notebook, you can use sparkmagic to configure your application in terms of resource use; please follow the sparkmagic and Wikipedia examples to apply it.
+* In the notebook, you can use sparkmagic to configure your notebook; please follow the `sparkmagic.ipynb` to use sparkmagic and enforce correct configuration.
 
-* Please avoid uploading data files in JupyterHub. The data files you upload to JupyterHub workspace cannot be loaded by PySpark kernel and running analysis directly from the data file in the workspace will easily overload the master node.
+* Please avoid uploading data files in JupyterHub workspace. The data files you upload to JupyterHub workspace cannot be loaded by PySpark kernel and running analysis directly from the data file in the workspace will easily overload the master node.
 
-### Use AWS S3 Bucket on Cluster
-
-* For deployment on the cluster, you are recommended to AWS S3; it is a common practice for data storage when using AWS.
-
-* Our S3 bucket on cluster is `s3://msbx5420-2025`
-
-* To check files and copy files to S3 bucket, you can use the following commands (make sure you have created your team directory on master node and uploaded your files there)
-
-  ```bash
-  aws s3 ls s3://msbx5420-2025
-  aws s3 ls s3://msbx5420-2025/projects/{user_directory}/
-  #copy single file, the last / is required
-  aws s3 cp /mnt1/msbx5420_projects/{user_directory}/{file.name} s3://msbx5420-2025/projects/{user_directory}/
-  #copy the entire directory
-  aws s3 cp /mnt1/msbx5420_projects/{user_directory} s3://msbx5420-2025/projects/{user_directory} --recursive
-  ```
-
-* In your Python notebook on JupyterHub, save or read data on S3 bucket with S3 path `s3://msbx-5420/projects/{user_directory}/{file.name}`
-
-* If your dataset is super large, please let the instructor know to help your upload the data
-
+* In your Python notebook on JupyterHub, save or read data on with S3 path such as `s3://msbx5420-2026/projects/{user_directory}/{your_file}` or `s3://msbx5420-2026/projects/{user_directory}/{your_folder}/{your_file}`
