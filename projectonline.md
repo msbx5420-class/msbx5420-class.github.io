@@ -103,7 +103,7 @@ You can use any dataset you want for this project. In case you have troubles in 
   aws s3 ls s3://msbx5420-2026/
   aws s3 ls s3://msbx5420-2026/projects/{user_directory}/
   #copy single file, the last / is required
-  aws s3 cp {your_file} s3://msbx5420-2025/projects/{user_directory}/
+  aws s3 cp {your_file} s3://msbx5420-2026/projects/{user_directory}/
   #copy the entire directory
   aws s3 cp {your_folder} s3://msbx5420-2026/projects/{user_directory}/{your_folder} --recursive
   ```
