@@ -70,7 +70,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Leeds AWS EMR Cluster: Leeds Technology Service has supported for the creation of AWS EMR cluster for the project. 
 
-* Host address is: *ec2-35-85-146-137.us-west-2.compute.amazonaws.com*
+* Host address is: *ec2-100-23-63-182.us-west-2.compute.amazonaws.com*
 
 * Private key file is same with the cluster in lab session: `MSBX5420.pem` 
 
@@ -85,9 +85,9 @@ You can use any dataset you want for this project. In case you have troubles in 
 * Commands to access cluster and copy file from laptop/PC to cluster
 
   ```bash
-  ssh -i MSBX5420.pem hadoop@ec2-35-85-146-137.us-west-2.compute.amazonaws.com
-  scp -i MSBX5420.pem {your_file} hadoop@ec2-35-85-146-137.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_projects/{user_directory}
-  scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-35-85-146-137.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_projects/{user_directory}
+  ssh -i MSBX5420.pem hadoop@ec2-100-23-63-182.us-west-2.compute.amazonaws.com
+  scp -i MSBX5420.pem {your_file} hadoop@ec2-100-23-63-182.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_projects/{user_directory}
+  scp -i MSBX5420.pem -r {your_folder} hadoop@ec2-100-23-63-182.us-west-2.compute.amazonaws.com:/mnt1/msbx5420_projects/{user_directory}
   ```
 
 ### Use AWS S3 Bucket on Cluster
@@ -105,7 +105,7 @@ You can use any dataset you want for this project. In case you have troubles in 
   #copy single file, the last / is required
   aws s3 cp {your_file} s3://msbx5420-2025/projects/{user_directory}/
   #copy the entire directory
-  aws s3 cp {your_folder} s3://msbx5420-2026/projects/{user_directory} --recursive
+  aws s3 cp {your_folder} s3://msbx5420-2026/projects/{user_directory}/{your_folder} --recursive
   ```
 
 * Try to clean up your files on the master node after you put them to S3
@@ -124,7 +124,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 * On your laptop/PC, use ssh port forwarding to connect to JupyterHub
 
   ```bash
-  ssh -i MSBX5420.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-35-85-146-137.us-west-2.compute.amazonaws.com
+  ssh -i MSBX5420.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-100-23-63-182.us-west-2.compute.amazonaws.com
   ```
 
 * Go to `https://localhost:8080` in browser and login with your team username and password; then create or upload your notebooks.
