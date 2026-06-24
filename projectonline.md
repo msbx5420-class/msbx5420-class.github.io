@@ -27,7 +27,7 @@ The objective of this project is to use what we learned in this course to solve 
 
 ## Project Timeline and Deliverable
 
-> For all project deliverables, they should be submitted on Canvas by one of the team members
+> For all project deliverables, they should be submitted on Canvas
 
 * ***<u>Project Proposal (Due Week 04):</u>*** You will need to develop a <u>one-page proposal</u> of your project (the second page will not be graded), to <u>discuss the dataset you would like to use</u> and <u>the problems you want to solve from the data</u>. Please be concise on your proposal and motivate your problems - why the problems you want to investigate are <u>important</u> and <u>interesting</u>. 
 * ***<u>Project Implementation (Due Week 06):</u>*** You will submit your final application (code, data, etc.) in the project as the deliverable of implementation.
@@ -74,9 +74,9 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Private key file is same with the cluster in lab session: `MSBX5420.pem` 
 
-* In the cluster, create your team directory under absolute path `/mnt1/msbx5420_projects` first and then copy your files to your team directory with `scp`
+* In the cluster, create your project directory under absolute path `/mnt1/msbx5420_projects` first and then copy your files to your project directory with `scp`
 
-* All personal directories (if needed) are under `/mnt1/msbx5420_exercises` and all team directories are under `/mnt1/msbx5420_projects`
+* All personal directories (if needed) are under `/mnt1/msbx5420_exercises` and all project directories are under `/mnt1/msbx5420_projects`
 
 * Please follow the rules to use cluster and create directories. Do not to use the directories under entry directory when you upload large files; it will overload the disk size of master node. If the user directory is full, directories under entry directory will be migrated to `/mnt1/msbx5420_projects`. <u>If you have very large data files and have troubles of uploading them to the cluster, please let the instructor know to help you upload the data.</u>
 
@@ -96,7 +96,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 * Our S3 bucket on cluster is `s3://msbx5420-2026`
 
-* To check files and copy files to S3 bucket, you can use the following commands <u>on the master node</u> (make sure you have created your team directory on master node and uploaded your files there)
+* To check files and copy files to S3 bucket, you can use the following commands <u>on the master node</u> (make sure you have created your project directory on master node and uploaded your files there)
 
   ```bash
   cd /mnt1/msbx5420_projects/{user_directory}
@@ -114,7 +114,7 @@ You can use any dataset you want for this project. In case you have troubles in 
 
 ### Use Jupyter Notebook on Cluster
 
-* Create JupyterHub user for your team <u>on the cluster master node (after ssh to the cluster)</u>. 
+* Create JupyterHub user <u>on the cluster master node (after ssh to the cluster)</u>. 
 
   ```bash
   sudo docker exec jupyterhub useradd -m -s /bin/bash -N {username}
@@ -127,7 +127,7 @@ You can use any dataset you want for this project. In case you have troubles in 
   ssh -i MSBX5420.pem -N -L localhost:8080:localhost:9443 hadoop@ec2-100-23-63-182.us-west-2.compute.amazonaws.com
   ```
 
-* Go to `https://localhost:8080` in browser and login with your team username and password; then create or upload your notebooks.
+* Go to `https://localhost:8080` in browser and login with your username and password; then create or upload your notebooks.
 
 * When you see security warning, click "Advanced" or "Details" to continue and bypass it. If you do not find "Advanced" or "Details", blindly type `thisisunsafe` in the page and press `enter` to bypass it.
 
